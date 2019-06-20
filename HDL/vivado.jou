@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Jun 19 14:38:16 2019
+# Process ID: 34520
+# Current directory: C:/OpenHardware/UserProject/DT5550W-Citiroc4Asic/HDL
+# Command line: vivado.exe -mode batch -source C:/OpenHardware/UserProject/DT5550W-Citiroc4Asic/HDL/DT5550W-Citiroc4Asic_program.tcl
+# Log file: C:/OpenHardware/UserProject/DT5550W-Citiroc4Asic/HDL/vivado.log
+# Journal file: C:/OpenHardware/UserProject/DT5550W-Citiroc4Asic/HDL\vivado.jou
+#-----------------------------------------------------------
+source C:/OpenHardware/UserProject/DT5550W-Citiroc4Asic/HDL/DT5550W-Citiroc4Asic_program.tcl

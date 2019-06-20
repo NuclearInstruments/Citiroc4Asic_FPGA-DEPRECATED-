@@ -1,0 +1,8 @@
+**/*.hw/* 
+**/*.runs/* 
+**/*.cache/* 
+**/*.ip_user_files/* 
+**/Debug/* 
+*.o
+*.lock
+*.log

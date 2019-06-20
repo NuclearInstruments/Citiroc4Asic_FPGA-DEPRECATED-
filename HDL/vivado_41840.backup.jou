@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Jun 19 13:24:32 2019
+# Process ID: 41840
+# Current directory: C:/OpenHardware/UserProject/DT5550W-Citiroc4Asic/HDL
+# Command line: vivado.exe -mode batch -source C:/OpenHardware/UserProject/DT5550W-Citiroc4Asic/HDL/DT5550W-Citiroc4Asic.tcl
+# Log file: C:/OpenHardware/UserProject/DT5550W-Citiroc4Asic/HDL/vivado.log
+# Journal file: C:/OpenHardware/UserProject/DT5550W-Citiroc4Asic/HDL\vivado.jou
+#-----------------------------------------------------------
+source C:/OpenHardware/UserProject/DT5550W-Citiroc4Asic/HDL/DT5550W-Citiroc4Asic.tcl
+create_project -in_memory generateNetlistIP -part xc7k160tffg676-2
+read_ip C:/OpenHardware/UserProject/DT5550W-Citiroc4Asic/output/DT5550W-Citiroc4Asic/DT5550W-Citiroc4Asic.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator.xci
+create_project -in_memory generateNetlistIP -part xc7k160tffg676-2
+read_ip C:/OpenHardware/UserProject/DT5550W-Citiroc4Asic/output/DT5550W-Citiroc4Asic/DT5550W-Citiroc4Asic.srcs/sources_1/ip/FTDI_FIFO_AW/FTDI_FIFO_AW.xci
+create_project -in_memory generateNetlistIP -part xc7k160tffg676-2
+read_ip C:/OpenHardware/UserProject/DT5550W-Citiroc4Asic/output/DT5550W-Citiroc4Asic/DT5550W-Citiroc4Asic.srcs/sources_1/ip/FTDI_FIFOs/FTDI_FIFOs.xci
+create_project -in_memory generateNetlistIP -part xc7k160tffg676-2
+read_ip C:/OpenHardware/UserProject/DT5550W-Citiroc4Asic/output/DT5550W-Citiroc4Asic/DT5550W-Citiroc4Asic.srcs/sources_1/ip/FlashPageMemory/FlashPageMemory.xci
+create_project -in_memory generateNetlistIP -part xc7k160tffg676-2
+read_ip C:/OpenHardware/UserProject/DT5550W-Citiroc4Asic/output/DT5550W-Citiroc4Asic/DT5550W-Citiroc4Asic.srcs/sources_1/ip/TestBram/TestBram.xci
+create_project -in_memory generateNetlistIP -part xc7k160tffg676-2
+read_ip C:/OpenHardware/UserProject/DT5550W-Citiroc4Asic/output/DT5550W-Citiroc4Asic/DT5550W-Citiroc4Asic.srcs/sources_1/ip/clk_wiz_0.xcix
+create_project -in_memory generateNetlistIP -part xc7k160tffg676-2
+read_ip C:/OpenHardware/UserProject/DT5550W-Citiroc4Asic/output/DT5550W-Citiroc4Asic/DT5550W-Citiroc4Asic.srcs/sources_1/ip/fast_clock/fast_clock.xci
+create_project -in_memory generateNetlistIP -part xc7k160tffg676-2
+read_ip C:/OpenHardware/UserProject/DT5550W-Citiroc4Asic/output/DT5550W-Citiroc4Asic/DT5550W-Citiroc4Asic.srcs/sources_1/ip/fifo_generator_0.xcix
