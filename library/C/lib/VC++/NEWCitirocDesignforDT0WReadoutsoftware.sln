@@ -1,0 +1,26 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("bfbd0c42-8563-4d44-b3db-dba6bd777785") = "NEWCitirocDesignforDT0WReadoutsoftware_Example", "NEWCitirocDesignforDT0WReadoutsoftware_EXAMPLE.vcxproj", "9a17aa61-e639-4aaf-92e0-c48e48beff14"
+EndProject
+Project("bfbd0c42-8563-4d44-b3db-dba6bd777785") = "NEWCitirocDesignforDT0WReadoutsoftware_LIB", "NEWCitirocDesignforDT0WReadoutsoftware_LIB.vcxproj", "93ddafb6-65db-4ae1-8dfa-b418658b5630"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		9a17aa61-e639-4aaf-92e0-c48e48beff14.Debug|x86.ActiveCfg = Debug|Win32
+		9a17aa61-e639-4aaf-92e0-c48e48beff14.Debug|x86.Build.0 = Debug|Win32
+		9a17aa61-e639-4aaf-92e0-c48e48beff14.Release|x86.ActiveCfg = Release|Win32
+		9a17aa61-e639-4aaf-92e0-c48e48beff14.Release|x86.Build.0 = Release|Win32
+		93ddafb6-65db-4ae1-8dfa-b418658b5630.Debug|x86.ActiveCfg = Debug|Win32
+		93ddafb6-65db-4ae1-8dfa-b418658b5630.Debug|x86.Build.0 = Debug|Win32
+		93ddafb6-65db-4ae1-8dfa-b418658b5630.Release|x86.ActiveCfg = Release|Win32
+		93ddafb6-65db-4ae1-8dfa-b418658b5630.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

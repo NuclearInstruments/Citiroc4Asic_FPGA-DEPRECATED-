@@ -222,6 +222,13 @@
   "RegionSize": 1,
   "Description": "",
   "Category": "Undefined"
+},
+{
+  "Name": "HOLD_TIME",
+  "Address": 15,
+  "RegionSize": 1,
+  "Description": "",
+  "Category": "Undefined"
 }],
 "MMCComponents":[
 {
@@ -1603,4 +1610,4 @@
     }
   ],
   "Channels": 2
-}],"Device":"DT5550W-Citiroc","Project":"DT5550W-Citiroc4Asic"}
+}],"Device":"DT5550W-Citiroc","Project":"NEWCitirocDesignforDT0WReadoutsoftware"}

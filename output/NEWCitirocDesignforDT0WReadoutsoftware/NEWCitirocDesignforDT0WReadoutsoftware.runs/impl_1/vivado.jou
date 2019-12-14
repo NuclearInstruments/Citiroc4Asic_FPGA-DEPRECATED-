@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Thu Dec 12 19:11:32 2019
+# Process ID: 10688
+# Current directory: C:/OpenHardware/UserProject/NEWCitirocDesignforDT0WReadoutsoftware/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.runs/impl_1
+# Command line: vivado.exe -log TOP_NEWCitirocDesignforDT0WReadoutsoftware.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source TOP_NEWCitirocDesignforDT0WReadoutsoftware.tcl -notrace
+# Log file: C:/OpenHardware/UserProject/NEWCitirocDesignforDT0WReadoutsoftware/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.runs/impl_1/TOP_NEWCitirocDesignforDT0WReadoutsoftware.vdi
+# Journal file: C:/OpenHardware/UserProject/NEWCitirocDesignforDT0WReadoutsoftware/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source TOP_NEWCitirocDesignforDT0WReadoutsoftware.tcl -notrace
