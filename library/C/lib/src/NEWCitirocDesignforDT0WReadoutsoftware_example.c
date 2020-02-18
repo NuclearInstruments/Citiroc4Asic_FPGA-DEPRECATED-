@@ -277,6 +277,59 @@ Citiroc_CitirocCfg0_CONFIG(ASIC_CONFIG, &handle);
 	}
 	printf("Download Finished");
 */
+/* //REMOVE THIS COMMENT TO ENABLE THE EXAMPLE CODE
+
+	uint32_t status_frame = 0;
+	uint32_t N_Packet = 100;
+	uint32_t data_frame[100000];
+	uint32_t read_data_frame;
+	uint32_t valid_data_frame;
+	uint32_t valid_data_enqueued;
+
+	uint32_t N_Total_Events = 10000;
+	uint32_t ReadDataNumber = 0;
+	int32_t timeout_frame = 1000;
+	t_FRAME_packet_collection decoded_packets;
+
+	//Configuration flag
+	int32_t FrameSync = 0;
+	int32_t	FrameWait = 0;
+	int32_t	FrameMask = 3;
+	int32_t	FrameExternalTrigger = 0;
+	int32_t	FrameOrTrigger = 1;
+
+	void *BufferDownloadHandler = NULL;
+	Utility_ALLOCATE_DOWNLOAD_BUFFER(&BufferDownloadHandler, 1024*1024);
+	printf("%x\n", BufferDownloadHandler);
+
+	if (CPACK_CP_0_RESET(&handle) != 0) printf("Reset Error");
+	if (CPACK_CP_0_START(&handle) != 0) printf("Start Error");
+	if (CPACK_CP_0_STATUS(&status_frame, &handle) != 0) printf("Status Error");
+	if (status_frame >0)
+	{
+		while (1)
+		{
+			valid_data_frame = 0;
+			if (CPACK_CP_0_DOWNLOAD(&data_frame, N_Packet * (<<<NUMBER OF PACKET LINES AFTER THE HEADER HERE>>>+3), timeout_frame, &handle, &read_data_frame, &valid_data_frame) != 0) printf("Data Download Error");
+			
+			valid_data_enqueued = 0;
+			Utility_ENQUEUE_DATA_IN_DOWNLOAD_BUFFER(BufferDownloadHandler, data_frame, valid_data_frame, &valid_data_enqueued);
+
+			if (CPACK_CP_0_RECONSTRUCT_DATA(BufferDownloadHandler, &decoded_packets) == 0)
+			{
+				printf(".");
+				//printf("Decoded data: %d\n", decoded_packets.valid_packets);
+				//	for (int i = 0; i < decoded_packets.valid_packets; i++)
+				//		printf("%lld %d %d %d %d\n", decoded_packets.packets[i].Time_Code, decoded_packets.packets[i].Energy[0], decoded_packets.packets[i].Energy[1], decoded_packets.packets[i].Energy[2], decoded_packets.packets[i].Energy[3]);
+				free_FRAME_packet_collection(&decoded_packets);
+			}
+			ReadDataNumber = ReadDataNumber+ N_Packet;
+	}
+		printf("Download completed");
+	}
+	else printf("Status Error");
+
+*/
 
 
 	

@@ -652,6 +652,54 @@ SCILIB int REG_HOLD_TIME_SET(uint32_t val, NI_HANDLE *handle)
 {
      return __abstracted_reg_write(val, SCI_REG_HOLD_TIME, handle);
 }
+SCILIB int REG_FR_IFP_GET(uint32_t *val, NI_HANDLE *handle)
+{
+     return __abstracted_reg_read(val, SCI_REG_FR_IFP, handle);
+}
+SCILIB int REG_FR_IFP_SET(uint32_t val, NI_HANDLE *handle)
+{
+     return __abstracted_reg_write(val, SCI_REG_FR_IFP, handle);
+}
+SCILIB int REG_FR_LIMIT_GET(uint32_t *val, NI_HANDLE *handle)
+{
+     return __abstracted_reg_read(val, SCI_REG_FR_LIMIT, handle);
+}
+SCILIB int REG_FR_LIMIT_SET(uint32_t val, NI_HANDLE *handle)
+{
+     return __abstracted_reg_write(val, SCI_REG_FR_LIMIT, handle);
+}
+SCILIB int REG_FR_IFP2_GET(uint32_t *val, NI_HANDLE *handle)
+{
+     return __abstracted_reg_read(val, SCI_REG_FR_IFP2, handle);
+}
+SCILIB int REG_FR_IFP2_SET(uint32_t val, NI_HANDLE *handle)
+{
+     return __abstracted_reg_write(val, SCI_REG_FR_IFP2, handle);
+}
+SCILIB int REG_FR_MODE_GET(uint32_t *val, NI_HANDLE *handle)
+{
+     return __abstracted_reg_read(val, SCI_REG_FR_MODE, handle);
+}
+SCILIB int REG_FR_MODE_SET(uint32_t val, NI_HANDLE *handle)
+{
+     return __abstracted_reg_write(val, SCI_REG_FR_MODE, handle);
+}
+SCILIB int REG_FR_DBG1_GET(uint32_t *val, NI_HANDLE *handle)
+{
+     return __abstracted_reg_read(val, SCI_REG_FR_DBG1, handle);
+}
+SCILIB int REG_FR_DBG1_SET(uint32_t val, NI_HANDLE *handle)
+{
+     return __abstracted_reg_write(val, SCI_REG_FR_DBG1, handle);
+}
+SCILIB int REG_FR_DBG2_GET(uint32_t *val, NI_HANDLE *handle)
+{
+     return __abstracted_reg_read(val, SCI_REG_FR_DBG2, handle);
+}
+SCILIB int REG_FR_DBG2_SET(uint32_t val, NI_HANDLE *handle)
+{
+     return __abstracted_reg_write(val, SCI_REG_FR_DBG2, handle);
+}
 //-----------------------------------------------------------------
 //-
 //- Citiroc_CitirocCfg0_CONFIG
@@ -3162,5 +3210,389 @@ for(int n=0; n< n_ch; n++)
     }
 }
 return 0;
+
+}
+//-----------------------------------------------------------------
+//-
+//- CPACK_CP_0_START
+//-
+//- Start acquisition.
+//-
+//- ARGUMENTS:
+//- 	          handle PARAM_INOUT  NI_HANDLE
+//- 		Connection handle to the board
+//- 		DEFAULT: 
+//- 		OPTIONAL: False
+//-
+//-
+//- RETURN [int]
+//- 	Return if the function has been succesfully executed
+//- 		0) Success
+//- 		-1) Error
+//-
+//-----------------------------------------------------------------
+
+SCILIB int CPACK_CP_0_START(NI_HANDLE *handle)
+
+{
+return __abstracted_reg_write(1,SCI_REG_CP_0_CONFIG, handle);
+
+}
+//-----------------------------------------------------------------
+//-
+//- CPACK_CP_0_STOP
+//-
+//- Start acquisition.
+//-
+//- ARGUMENTS:
+//- 	          handle PARAM_INOUT  NI_HANDLE
+//- 		Connection handle to the board
+//- 		DEFAULT: 
+//- 		OPTIONAL: False
+//-
+//-
+//- RETURN [int]
+//- 	Return if the function has been succesfully executed
+//- 		0) Success
+//- 		-1) Error
+//-
+//-----------------------------------------------------------------
+
+SCILIB int CPACK_CP_0_STOP(NI_HANDLE *handle)
+
+{
+return __abstracted_reg_write(0,SCI_REG_CP_0_CONFIG, handle);
+
+}
+//-----------------------------------------------------------------
+//-
+//- CPACK_CP_0_RESET
+//-
+//- Reset counters and FIFO
+//-
+//- ARGUMENTS:
+//- 	          handle PARAM_INOUT  NI_HANDLE
+//- 		Connection handle to the board
+//- 		DEFAULT: 
+//- 		OPTIONAL: False
+//-
+//-
+//- RETURN [int]
+//- 	Return if the function has been succesfully executed
+//- 		0) Success
+//- 		-1) Error
+//-
+//-----------------------------------------------------------------
+
+SCILIB int CPACK_CP_0_RESET(NI_HANDLE *handle)
+{
+return __abstracted_reg_write(0,SCI_REG_CP_0_CONFIG, handle);
+
+}
+//-----------------------------------------------------------------
+//-
+//- CPACK_CP_0_FLUSH
+//-
+//- Clear Fifo Content
+//-
+//- ARGUMENTS:
+//- 	          handle PARAM_INOUT  NI_HANDLE
+//- 		Connection handle to the board
+//- 		DEFAULT: 
+//- 		OPTIONAL: False
+//-
+//-
+//- RETURN [int]
+//- 	Return if the function has been succesfully executed
+//- 		0) Success
+//- 		-1) Error
+//-
+//-----------------------------------------------------------------
+
+SCILIB int CPACK_CP_0_FLUSH(NI_HANDLE *handle)
+{
+return __abstracted_reg_write(0,SCI_REG_CP_0_CONFIG, handle);
+
+}
+//-----------------------------------------------------------------
+//-
+//- CPACK_CP_0_STATUS
+//-
+//- Get status
+//-
+//- ARGUMENTS:
+//- 	          status  PARAM_OUT    int32_t
+//- 		Return the status:
+//- 		DEFAULT: 
+//- 		OPTIONAL: False
+//- 		bit[0] = 0) No data available
+//- 		bit[0] = 1) Data available
+//- 		bit[1] = 1) Running
+//- 		bit[2] = 1) Full
+//-
+//- 	          handle PARAM_INOUT  NI_HANDLE
+//- 		Connection handle to the board
+//- 		DEFAULT: 
+//- 		OPTIONAL: False
+//-
+//-
+//- RETURN [int]
+//- 	Return if the function has been succesfully executed
+//- 		0) Success
+//- 		-1) Error
+//-
+//-----------------------------------------------------------------
+
+SCILIB int CPACK_CP_0_STATUS(uint32_t *status,NI_HANDLE *handle)
+{
+int err;
+uint32_t int_status=0;
+err= __abstracted_reg_read(&int_status, SCI_REG_CP_0_READ_STATUS, handle);
+*status = int_status & 0xF;
+return err;
+
+}
+//-----------------------------------------------------------------
+//-
+//- CPACK_CP_0_DATA_AVAILABLE
+//-
+//- Return number of word available in the FIFO
+//-
+//- ARGUMENTS:
+//- 	          status  PARAM_OUT    int32_t
+//- 		Return the status (1) data available (0) no data
+//- 		DEFAULT: 
+//- 		OPTIONAL: False
+//- 		bit[0] = 0) No data available
+//- 		bit[0] = 1) Data available
+//- 		bit[1] = 1) Running
+//- 		bit[2] = 1) Full
+//-
+//- 	          handle PARAM_INOUT  NI_HANDLE
+//- 		Connection handle to the board
+//- 		DEFAULT: 
+//- 		OPTIONAL: False
+//-
+//-
+//- RETURN [int]
+//- 	Return if the function has been succesfully executed
+//- 		0) Success
+//- 		-1) Error
+//-
+//-----------------------------------------------------------------
+
+SCILIB int CPACK_CP_0_DATA_AVAILABLE(uint32_t *status,NI_HANDLE *handle)
+{
+return __abstracted_reg_read(status, SCI_REG_CP_0_READ_VALID_WORDS, handle);
+
+}
+//-----------------------------------------------------------------
+//-
+//- CPACK_CP_0_DOWNLOAD
+//-
+//- Download data from buffer. Data in the buffer respect the packet layout defined in the Packet Creator Tool
+//- 
+//- USAGE: 
+//- 
+//-
+//- ARGUMENTS:
+//- 	             val  PARAM_OUT   uint32_t
+//- 		uint32_t buffer data with preallocated size of at list 'size' parameters + 16 word
+//- 		DEFAULT: 
+//- 		OPTIONAL: False
+//-
+//- 	             val   PARAM_IN       size
+//- 		number of word to download from the buffer. 
+//- 		DEFAULT: 
+//- 		OPTIONAL: False
+//-
+//- 	             val   PARAM_IN    int32_t
+//- 		timeout in ms
+//- 		DEFAULT: 
+//- 		OPTIONAL: False
+//-
+//- 	          handle PARAM_INOUT  NI_HANDLE
+//- 		Connection handle to the board
+//- 		DEFAULT: 
+//- 		OPTIONAL: False
+//-
+//- 	       read_data  PARAM_OUT    int32_t
+//- 		number of word read from the buffer
+//- 		DEFAULT: 
+//- 		OPTIONAL: False
+//-
+//- 	      valid_data  PARAM_OUT    int32_t
+//- 		number of word valid in the buffer
+//- 		DEFAULT: 
+//- 		OPTIONAL: False
+//-
+//-
+//- RETURN [int]
+//- 	Return if the function has been succesfully executed
+//- 		0) Success
+//- 		-1) Error
+//-
+//-----------------------------------------------------------------
+
+SCILIB int CPACK_CP_0_DOWNLOAD(uint32_t *val, uint32_t size, int32_t timeout, NI_HANDLE *handle, uint32_t *read_data, uint32_t *valid_data)
+{
+return __abstracted_fifo_read(val, size, SCI_REG_CP_0_FIFOADDRESS, SCI_REG_CP_0_READ_STATUS,1, timeout, handle, read_data, valid_data);
+
+}
+//-----------------------------------------------------------------
+//-
+//- CPACK_CP_0_RECONSTRUCT_DATA
+//-
+//- Take in input a circular buffer (buffer_handle) allocated with the function Utility_ALLOCATE_DOWNLOAD_BUFFER 
+//- and filled with downloaded data Utility_ENQUEUE_DATA_IN_DOWNLOAD_BUFFER and decoded the packet  
+//- created with the Image (Frame Transfer block).
+//- The function internally allocate the output data structure t_FRAME_packet_collection and fill it with packed data
+//- decoded. Release the memory allocated by the function with free_FRAME_packet_collectionvoid(buffer) function
+//- in order to avoid memory leakage
+//- ----------------------------------------
+//- USAGE: 
+//-   t_FRAME_packet_collection decoded_packets; 
+//-   uint32_t data_frame[100000]; 
+//-   void *BufferDownloadHandler = NULL;
+//- 
+//-   Utility_ALLOCATE_DOWNLOAD_BUFFER(&BufferDownloadHandler, 1024*1024);
+//-   .... initialize frame transfer ....
+//-   while (1){
+//-     CPACK_CP0_DOWNLOAD(&data_frame, N_Packet * (PacketSize), timeout_frame, &handle, &read_data_frame, &valid_data_frame); 
+//-     Utility_ENQUEUE_DATA_IN_DOWNLOAD_BUFFER(BufferDownloadHandler, data_frame, valid_data_frame, &valid_data_enqueued); 
+//-     if (CPACK_CP_0_RECONSTRUCT_DATA(BufferDownloadHandler, &decoded_packets) == 0) { 
+//-         .... process data contained in decoded_packets....
+//-         free_FRAME_packet_collectionvoid(&decoded_packets);
+//-     }
+//- 
+//- 
+//- 
+//- 
+//- THIS FUNCTION MUST BE CONFIGURED IN FUNCTION OF THE PACKET LAYOUT DEFINED IN THE TOOL!
+//- 
+//- 
+//- 
+//- This is just the skeleton for the decoded function!
+//- In the state 3 of the thate machine in the code the packet decoder extract every line from the packet
+//- for example if the payload of your packet is 8 channels of 16 bits alligned 2 channels per row
+//- 1:   0xFFFFFFFF      %%HEADER                            Decoded in state 0
+//- 2:   0xtttttttt      %%TIMECODE                          Decoded in state 1
+//- 3:   0xpppppppp      %%PACKET COUNTER                    Decoded in state 2
+//- 4:   IN1    IN2      %%16 BIT DATA * 2 Channels          Decoded in state 3
+//- 5:   IN3    IN4      %%16 BIT DATA * 2 Channels          Decoded in state 3
+//- 6:   IN5    IN6      %%16 BIT DATA * 2 Channels          Decoded in state 3
+//- 7:   IN7    IN7      %%16 BIT DATA * 2 Channels          Decoded in state 3
+//- <<<NUMBER OF PACKET LINES AFTER THE HEADER HERE>>> must be set to 4 (the line containing the payload 4...7)
+//- You can change the state machine in an arbitrary way in order to correctly decode packets and extract every single channels
+//- This function example works as is for the following packet format
+//- 1:   0xFFFFFFFF      %%HEADER                            Decoded in state 0
+//- 2:   0xtttttttt      %%TIMECODE                          Decoded in state 1
+//- 3:   0xpppppppp      %%PACKET COUNTER                    Decoded in state 2
+//- 4:   IN1             %%32 BIT DATA                       Decoded in state 3
+//- 5:   IN2             %%32 BIT DATA                       Decoded in state 3
+//- 6:   IN3             %%32 BIT DATA                       Decoded in state 3
+//- 7:   IN4             %%32 BIT DATA                       Decoded in state 3
+//- 
+//-
+//- ARGUMENTS:
+//- 	   buffer_handle   PARAM_IN       void
+//- 		void pointer to the allocated memory area
+//- 		DEFAULT: 
+//- 		OPTIONAL: False
+//-
+//- 	 decoded_packets  PARAM_OUT t_FRAME_packet_collection
+//- 		Output vector containing the decoded data
+//- 		DEFAULT: 
+//- 		OPTIONAL: False
+//-
+//-
+//- RETURN [int]
+//- 	Return if the function has been succesfully executed
+//- 		0) Success
+//- 		-1) Error
+//-
+//-----------------------------------------------------------------
+
+SCILIB int CPACK_CP_0_RECONSTRUCT_DATA(void *buffer_handle, t_FRAME_packet_collection *decoded_packets)
+{
+	cbuf_handle_t cbuf;
+	cbuf = (cbuf_handle_t)buffer_handle;
+	int n_ch = <<<NUMBER OF PACKET LINES AFTER THE HEADER HERE>>>;
+	int PacketSize = n_ch + 3;
+	int in_sync = 0;
+	uint64_t event_timecode = 0;
+	uint32_t ev_energy = 0;
+	uint32_t mpe = 0;
+	int ch_index = 0;
+	int i = 0,j;
+	int k = 0;
+	//check if we have elements in the circular buffer
+	if (circular_buf_size(cbuf) < PacketSize) return -1;
+	//allocate output
+	int possible_packets = (circular_buf_size(cbuf) / PacketSize)+10;
+	decoded_packets->packets = (t_FRAME_packet *)malloc(possible_packets * sizeof(t_FRAME_packet));
+	if (decoded_packets->packets==NULL) return -2;
+	for (i = 0; i < possible_packets; i++)
+	{
+		decoded_packets->packets[i].Energy = (uint32_t *)malloc(n_ch * sizeof(uint32_t));
+		if (decoded_packets->packets[i].Energy == NULL)
+		{
+			for (j = 0; j < i; j++)
+			{
+				if (decoded_packets->packets[i].Energy!=NULL)
+					free(decoded_packets->packets[i].Energy);
+			}
+			if (decoded_packets->packets != NULL)
+				free(decoded_packets->packets);
+
+			return -2;
+		}
+	}
+	decoded_packets->allocated_packets = possible_packets;
+	decoded_packets->valid_packets = 0;
+	
+	//process packets
+	while (circular_buf_size(cbuf)> PacketSize)
+	{
+		circular_buf_get(cbuf, &mpe);
+
+		if (in_sync == 0) {
+			if (mpe != 0x<<<YOUR HEADER HERE>>>)
+			{
+				continue;
+			}
+			in_sync = 1;
+		    ch_index =0;
+			continue;
+		}
+		if (in_sync == 1) {
+			decoded_packets->packets[k].Time_Code =  mpe;
+			in_sync = 2;
+			continue;
+		}
+		if (in_sync == 2) {
+			decoded_packets->packets[k].Id = (mpe);
+			in_sync = 3;
+			continue;
+		}
+		if (in_sync == 3) {
+			if (mpe ==  0x<<<YOUR HEADER HERE>>>) {
+				in_sync = 1;
+			    ch_index =0;
+			}
+			else {
+				decoded_packets->packets[k].Energy[ch_index] = mpe;
+				ch_index++;
+				if (ch_index == n_ch) {
+					in_sync = 0;
+					k++;
+					decoded_packets->valid_packets++;
+				}
+			}
+			continue;
+		}
+	}
+
+ return 0;
 
 }

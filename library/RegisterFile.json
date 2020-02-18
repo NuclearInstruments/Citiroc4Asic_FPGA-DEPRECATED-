@@ -229,6 +229,48 @@
   "RegionSize": 1,
   "Description": "",
   "Category": "Undefined"
+},
+{
+  "Name": "FR_IFP",
+  "Address": 16,
+  "RegionSize": 1,
+  "Description": "",
+  "Category": "Undefined"
+},
+{
+  "Name": "FR_LIMIT",
+  "Address": 17,
+  "RegionSize": 1,
+  "Description": "",
+  "Category": "Undefined"
+},
+{
+  "Name": "FR_IFP2",
+  "Address": 18,
+  "RegionSize": 1,
+  "Description": "",
+  "Category": "Undefined"
+},
+{
+  "Name": "FR_MODE",
+  "Address": 19,
+  "RegionSize": 1,
+  "Description": "",
+  "Category": "Undefined"
+},
+{
+  "Name": "FR_DBG1",
+  "Address": 20,
+  "RegionSize": 1,
+  "Description": "",
+  "Category": "Undefined"
+},
+{
+  "Name": "FR_DBG2",
+  "Address": 21,
+  "RegionSize": 1,
+  "Description": "",
+  "Category": "Undefined"
 }],
 "MMCComponents":[
 {
@@ -1610,4 +1652,35 @@
     }
   ],
   "Channels": 2
+},
+{
+  "Name": "CP_0",
+  "Type": "CustomPacket",
+  "Address": 2097152,
+  "Version": "1.1.0.0",
+  "Channels": 0,
+  "Registers": [
+    {
+      "Name": "READ_STATUS",
+      "Address": 2097153,
+      "RegionSize": 1,
+      "Description": "",
+      "Category": "Undefined"
+    },
+    {
+      "Name": "READ_VALID_WORDS",
+      "Address": 2097154,
+      "RegionSize": 1,
+      "Description": "",
+      "Category": "Undefined"
+    },
+    {
+      "Name": "CONFIG",
+      "Address": 2097155,
+      "RegionSize": 1,
+      "Description": "",
+      "Category": "Undefined"
+    }
+  ],
+  "UseDMA": false
 }],"Device":"DT5550W-Citiroc","Project":"NEWCitirocDesignforDT0WReadoutsoftware"}

@@ -840,6 +840,41 @@ architecture Behavioral of TOP_NEWCitirocDesignforDT0WReadoutsoftware is
 		REG_HOLD_TIME_WR : OUT STD_LOGIC_VECTOR(31 downto 0); 
 		INT_HOLD_TIME_RD : OUT STD_LOGIC_VECTOR(0 downto 0); 
 		INT_HOLD_TIME_WR : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		REG_FR_IFP_RD : IN STD_LOGIC_VECTOR(31 downto 0); 
+		REG_FR_IFP_WR : OUT STD_LOGIC_VECTOR(31 downto 0); 
+		INT_FR_IFP_RD : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		INT_FR_IFP_WR : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		REG_FR_LIMIT_RD : IN STD_LOGIC_VECTOR(31 downto 0); 
+		REG_FR_LIMIT_WR : OUT STD_LOGIC_VECTOR(31 downto 0); 
+		INT_FR_LIMIT_RD : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		INT_FR_LIMIT_WR : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		REG_FR_IFP2_RD : IN STD_LOGIC_VECTOR(31 downto 0); 
+		REG_FR_IFP2_WR : OUT STD_LOGIC_VECTOR(31 downto 0); 
+		INT_FR_IFP2_RD : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		INT_FR_IFP2_WR : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		REG_FR_MODE_RD : IN STD_LOGIC_VECTOR(31 downto 0); 
+		REG_FR_MODE_WR : OUT STD_LOGIC_VECTOR(31 downto 0); 
+		INT_FR_MODE_RD : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		INT_FR_MODE_WR : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		REG_FR_DBG1_RD : IN STD_LOGIC_VECTOR(31 downto 0); 
+		REG_FR_DBG1_WR : OUT STD_LOGIC_VECTOR(31 downto 0); 
+		INT_FR_DBG1_RD : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		INT_FR_DBG1_WR : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		REG_FR_DBG2_RD : IN STD_LOGIC_VECTOR(31 downto 0); 
+		REG_FR_DBG2_WR : OUT STD_LOGIC_VECTOR(31 downto 0); 
+		INT_FR_DBG2_RD : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		INT_FR_DBG2_WR : OUT STD_LOGIC_VECTOR(0 downto 0); 
+	BUS_CP_0_READ_DATA : IN STD_LOGIC_VECTOR(31 downto 0); 
+	BUS_CP_0_WRITE_DATA : OUT STD_LOGIC_VECTOR(31 downto 0); 
+	BUS_CP_0_W_INT : OUT STD_LOGIC_VECTOR(0 downto 0); 
+	BUS_CP_0_R_INT : OUT STD_LOGIC_VECTOR(0 downto 0); 
+	BUS_CP_0_VLD : IN STD_LOGIC_VECTOR(0 downto 0); 
+		REG_CP_0_READ_STATUS_RD : IN STD_LOGIC_VECTOR(31 downto 0); 
+		INT_CP_0_READ_STATUS_RD : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		REG_CP_0_READ_VALID_WORDS_RD : IN STD_LOGIC_VECTOR(31 downto 0); 
+		INT_CP_0_READ_VALID_WORDS_RD : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		REG_CP_0_CONFIG_WR : OUT STD_LOGIC_VECTOR(31 downto 0); 
+		INT_CP_0_CONFIG_WR : OUT STD_LOGIC_VECTOR(0 downto 0); 
 		REG_UNIQUE_RD : IN STD_LOGIC_VECTOR(31 downto 0); 
 		REG_UNIQUE_WR : OUT STD_LOGIC_VECTOR(31 downto 0); 
 	
@@ -2310,6 +2345,560 @@ signal U331_TRIG_OUT : std_logic_vector(0 downto 0);
 signal U331_TRIG_EXT_OUT : std_logic_vector(0 downto 0);
 signal U332_TRIG_OUT : std_logic_vector(0 downto 0);
 signal U332_TRIG_EXT_OUT : std_logic_vector(0 downto 0);
+signal U333_C_0 : std_logic_vector(31 downto 0);
+signal U333_C_1 : std_logic_vector(31 downto 0);
+signal U333_C_2 : std_logic_vector(31 downto 0);
+signal U333_C_3 : std_logic_vector(31 downto 0);
+signal U333_C_4 : std_logic_vector(31 downto 0);
+signal U333_C_5 : std_logic_vector(31 downto 0);
+signal U333_C_6 : std_logic_vector(31 downto 0);
+signal U333_C_7 : std_logic_vector(31 downto 0);
+signal U333_C_8 : std_logic_vector(31 downto 0);
+signal U333_C_9 : std_logic_vector(31 downto 0);
+signal U333_C_10 : std_logic_vector(31 downto 0);
+signal U333_C_11 : std_logic_vector(31 downto 0);
+signal U333_C_12 : std_logic_vector(31 downto 0);
+signal U333_C_13 : std_logic_vector(31 downto 0);
+signal U333_C_14 : std_logic_vector(31 downto 0);
+signal U333_C_15 : std_logic_vector(31 downto 0);
+signal U333_C_16 : std_logic_vector(31 downto 0);
+signal U333_C_17 : std_logic_vector(31 downto 0);
+signal U333_C_18 : std_logic_vector(31 downto 0);
+signal U333_C_19 : std_logic_vector(31 downto 0);
+signal U333_C_20 : std_logic_vector(31 downto 0);
+signal U333_C_21 : std_logic_vector(31 downto 0);
+signal U333_C_22 : std_logic_vector(31 downto 0);
+signal U333_C_23 : std_logic_vector(31 downto 0);
+signal U333_C_24 : std_logic_vector(31 downto 0);
+signal U333_C_25 : std_logic_vector(31 downto 0);
+signal U333_C_26 : std_logic_vector(31 downto 0);
+signal U333_C_27 : std_logic_vector(31 downto 0);
+signal U333_C_28 : std_logic_vector(31 downto 0);
+signal U333_C_29 : std_logic_vector(31 downto 0);
+signal U333_C_30 : std_logic_vector(31 downto 0);
+signal U333_C_31 : std_logic_vector(31 downto 0);
+
+COMPONENT SUBPAGE_Framing
+PORT(
+	T_0 : IN std_logic_vector(0 downto 0);
+	T_1 : IN std_logic_vector(0 downto 0);
+	T_2 : IN std_logic_vector(0 downto 0);
+	T_3 : IN std_logic_vector(0 downto 0);
+	T_4 : IN std_logic_vector(0 downto 0);
+	T_5 : IN std_logic_vector(0 downto 0);
+	T_6 : IN std_logic_vector(0 downto 0);
+	T_7 : IN std_logic_vector(0 downto 0);
+	T_8 : IN std_logic_vector(0 downto 0);
+	T_9 : IN std_logic_vector(0 downto 0);
+	T_10 : IN std_logic_vector(0 downto 0);
+	T_11 : IN std_logic_vector(0 downto 0);
+	T_12 : IN std_logic_vector(0 downto 0);
+	T_13 : IN std_logic_vector(0 downto 0);
+	T_14 : IN std_logic_vector(0 downto 0);
+	T_15 : IN std_logic_vector(0 downto 0);
+	T_16 : IN std_logic_vector(0 downto 0);
+	T_17 : IN std_logic_vector(0 downto 0);
+	T_18 : IN std_logic_vector(0 downto 0);
+	T_19 : IN std_logic_vector(0 downto 0);
+	T_20 : IN std_logic_vector(0 downto 0);
+	T_21 : IN std_logic_vector(0 downto 0);
+	T_22 : IN std_logic_vector(0 downto 0);
+	T_23 : IN std_logic_vector(0 downto 0);
+	T_24 : IN std_logic_vector(0 downto 0);
+	T_25 : IN std_logic_vector(0 downto 0);
+	T_26 : IN std_logic_vector(0 downto 0);
+	T_27 : IN std_logic_vector(0 downto 0);
+	T_28 : IN std_logic_vector(0 downto 0);
+	T_29 : IN std_logic_vector(0 downto 0);
+	T_30 : IN std_logic_vector(0 downto 0);
+	T_31 : IN std_logic_vector(0 downto 0);
+	FRAME : IN std_logic_vector(0 downto 0);
+	C_0 : OUT std_logic_vector(31 downto 0);
+	C_1 : OUT std_logic_vector(31 downto 0);
+	C_2 : OUT std_logic_vector(31 downto 0);
+	C_3 : OUT std_logic_vector(31 downto 0);
+	C_4 : OUT std_logic_vector(31 downto 0);
+	C_5 : OUT std_logic_vector(31 downto 0);
+	C_6 : OUT std_logic_vector(31 downto 0);
+	C_7 : OUT std_logic_vector(31 downto 0);
+	C_8 : OUT std_logic_vector(31 downto 0);
+	C_9 : OUT std_logic_vector(31 downto 0);
+	C_10 : OUT std_logic_vector(31 downto 0);
+	C_11 : OUT std_logic_vector(31 downto 0);
+	C_12 : OUT std_logic_vector(31 downto 0);
+	C_13 : OUT std_logic_vector(31 downto 0);
+	C_14 : OUT std_logic_vector(31 downto 0);
+	C_15 : OUT std_logic_vector(31 downto 0);
+	C_16 : OUT std_logic_vector(31 downto 0);
+	C_17 : OUT std_logic_vector(31 downto 0);
+	C_18 : OUT std_logic_vector(31 downto 0);
+	C_19 : OUT std_logic_vector(31 downto 0);
+	C_20 : OUT std_logic_vector(31 downto 0);
+	C_21 : OUT std_logic_vector(31 downto 0);
+	C_22 : OUT std_logic_vector(31 downto 0);
+	C_23 : OUT std_logic_vector(31 downto 0);
+	C_24 : OUT std_logic_vector(31 downto 0);
+	C_25 : OUT std_logic_vector(31 downto 0);
+	C_26 : OUT std_logic_vector(31 downto 0);
+	C_27 : OUT std_logic_vector(31 downto 0);
+	C_28 : OUT std_logic_vector(31 downto 0);
+	C_29 : OUT std_logic_vector(31 downto 0);
+	C_30 : OUT std_logic_vector(31 downto 0);
+	C_31 : OUT std_logic_vector(31 downto 0);
+    GlobalReset: IN STD_LOGIC_VECTOR(0 DOWNTO 0); 
+    CLK_ACQ: in std_logic_vector (0 downto 0); 
+    BUS_CLK: in std_logic_vector (0 downto 0); 
+    CLK_40: in std_logic_vector (0 downto 0); 
+    CLK_80: in std_logic_vector (0 downto 0); 
+    clk_160: in std_logic_vector (0 downto 0); 
+    clk_320: in std_logic_vector (0 downto 0); 
+    FAST_CLK_100: in std_logic_vector (0 downto 0); 
+    FAST_CLK_200: in std_logic_vector (0 downto 0); 
+    FAST_CLK_250: in std_logic_vector (0 downto 0); 
+    FAST_CLK_250_90: in std_logic_vector (0 downto 0); 
+    FAST_CLK_500: in std_logic_vector (0 downto 0); 
+    FAST_CLK_500_90: in std_logic_vector (0 downto 0); 
+    GlobalClock: in std_logic_vector (0 downto 0); 
+    async_clk: IN STD_LOGIC_VECTOR(0 DOWNTO 0)); 
+END COMPONENT;
+signal U334_C_0 : std_logic_vector(31 downto 0);
+signal U334_C_1 : std_logic_vector(31 downto 0);
+signal U334_C_2 : std_logic_vector(31 downto 0);
+signal U334_C_3 : std_logic_vector(31 downto 0);
+signal U334_C_4 : std_logic_vector(31 downto 0);
+signal U334_C_5 : std_logic_vector(31 downto 0);
+signal U334_C_6 : std_logic_vector(31 downto 0);
+signal U334_C_7 : std_logic_vector(31 downto 0);
+signal U334_C_8 : std_logic_vector(31 downto 0);
+signal U334_C_9 : std_logic_vector(31 downto 0);
+signal U334_C_10 : std_logic_vector(31 downto 0);
+signal U334_C_11 : std_logic_vector(31 downto 0);
+signal U334_C_12 : std_logic_vector(31 downto 0);
+signal U334_C_13 : std_logic_vector(31 downto 0);
+signal U334_C_14 : std_logic_vector(31 downto 0);
+signal U334_C_15 : std_logic_vector(31 downto 0);
+signal U334_C_16 : std_logic_vector(31 downto 0);
+signal U334_C_17 : std_logic_vector(31 downto 0);
+signal U334_C_18 : std_logic_vector(31 downto 0);
+signal U334_C_19 : std_logic_vector(31 downto 0);
+signal U334_C_20 : std_logic_vector(31 downto 0);
+signal U334_C_21 : std_logic_vector(31 downto 0);
+signal U334_C_22 : std_logic_vector(31 downto 0);
+signal U334_C_23 : std_logic_vector(31 downto 0);
+signal U334_C_24 : std_logic_vector(31 downto 0);
+signal U334_C_25 : std_logic_vector(31 downto 0);
+signal U334_C_26 : std_logic_vector(31 downto 0);
+signal U334_C_27 : std_logic_vector(31 downto 0);
+signal U334_C_28 : std_logic_vector(31 downto 0);
+signal U334_C_29 : std_logic_vector(31 downto 0);
+signal U334_C_30 : std_logic_vector(31 downto 0);
+signal U334_C_31 : std_logic_vector(31 downto 0);
+signal U335_C_0 : std_logic_vector(31 downto 0);
+signal U335_C_1 : std_logic_vector(31 downto 0);
+signal U335_C_2 : std_logic_vector(31 downto 0);
+signal U335_C_3 : std_logic_vector(31 downto 0);
+signal U335_C_4 : std_logic_vector(31 downto 0);
+signal U335_C_5 : std_logic_vector(31 downto 0);
+signal U335_C_6 : std_logic_vector(31 downto 0);
+signal U335_C_7 : std_logic_vector(31 downto 0);
+signal U335_C_8 : std_logic_vector(31 downto 0);
+signal U335_C_9 : std_logic_vector(31 downto 0);
+signal U335_C_10 : std_logic_vector(31 downto 0);
+signal U335_C_11 : std_logic_vector(31 downto 0);
+signal U335_C_12 : std_logic_vector(31 downto 0);
+signal U335_C_13 : std_logic_vector(31 downto 0);
+signal U335_C_14 : std_logic_vector(31 downto 0);
+signal U335_C_15 : std_logic_vector(31 downto 0);
+signal U335_C_16 : std_logic_vector(31 downto 0);
+signal U335_C_17 : std_logic_vector(31 downto 0);
+signal U335_C_18 : std_logic_vector(31 downto 0);
+signal U335_C_19 : std_logic_vector(31 downto 0);
+signal U335_C_20 : std_logic_vector(31 downto 0);
+signal U335_C_21 : std_logic_vector(31 downto 0);
+signal U335_C_22 : std_logic_vector(31 downto 0);
+signal U335_C_23 : std_logic_vector(31 downto 0);
+signal U335_C_24 : std_logic_vector(31 downto 0);
+signal U335_C_25 : std_logic_vector(31 downto 0);
+signal U335_C_26 : std_logic_vector(31 downto 0);
+signal U335_C_27 : std_logic_vector(31 downto 0);
+signal U335_C_28 : std_logic_vector(31 downto 0);
+signal U335_C_29 : std_logic_vector(31 downto 0);
+signal U335_C_30 : std_logic_vector(31 downto 0);
+signal U335_C_31 : std_logic_vector(31 downto 0);
+signal U336_C_0 : std_logic_vector(31 downto 0);
+signal U336_C_1 : std_logic_vector(31 downto 0);
+signal U336_C_2 : std_logic_vector(31 downto 0);
+signal U336_C_3 : std_logic_vector(31 downto 0);
+signal U336_C_4 : std_logic_vector(31 downto 0);
+signal U336_C_5 : std_logic_vector(31 downto 0);
+signal U336_C_6 : std_logic_vector(31 downto 0);
+signal U336_C_7 : std_logic_vector(31 downto 0);
+signal U336_C_8 : std_logic_vector(31 downto 0);
+signal U336_C_9 : std_logic_vector(31 downto 0);
+signal U336_C_10 : std_logic_vector(31 downto 0);
+signal U336_C_11 : std_logic_vector(31 downto 0);
+signal U336_C_12 : std_logic_vector(31 downto 0);
+signal U336_C_13 : std_logic_vector(31 downto 0);
+signal U336_C_14 : std_logic_vector(31 downto 0);
+signal U336_C_15 : std_logic_vector(31 downto 0);
+signal U336_C_16 : std_logic_vector(31 downto 0);
+signal U336_C_17 : std_logic_vector(31 downto 0);
+signal U336_C_18 : std_logic_vector(31 downto 0);
+signal U336_C_19 : std_logic_vector(31 downto 0);
+signal U336_C_20 : std_logic_vector(31 downto 0);
+signal U336_C_21 : std_logic_vector(31 downto 0);
+signal U336_C_22 : std_logic_vector(31 downto 0);
+signal U336_C_23 : std_logic_vector(31 downto 0);
+signal U336_C_24 : std_logic_vector(31 downto 0);
+signal U336_C_25 : std_logic_vector(31 downto 0);
+signal U336_C_26 : std_logic_vector(31 downto 0);
+signal U336_C_27 : std_logic_vector(31 downto 0);
+signal U336_C_28 : std_logic_vector(31 downto 0);
+signal U336_C_29 : std_logic_vector(31 downto 0);
+signal U336_C_30 : std_logic_vector(31 downto 0);
+signal U336_C_31 : std_logic_vector(31 downto 0);
+signal U337_A_TRG_0 : std_logic_vector(0 downto 0) := "0";
+signal U338_A_TRG_1 : std_logic_vector(0 downto 0) := "0";
+signal U339_A_TRG_2 : std_logic_vector(0 downto 0) := "0";
+signal U340_A_TRG_3 : std_logic_vector(0 downto 0) := "0";
+signal U341_A_TRG_4 : std_logic_vector(0 downto 0) := "0";
+signal U342_A_TRG_5 : std_logic_vector(0 downto 0) := "0";
+signal U343_A_TRG_6 : std_logic_vector(0 downto 0) := "0";
+signal U344_A_TRG_7 : std_logic_vector(0 downto 0) := "0";
+signal U345_A_TRG_8 : std_logic_vector(0 downto 0) := "0";
+signal U346_A_TRG_9 : std_logic_vector(0 downto 0) := "0";
+signal U347_A_TRG_10 : std_logic_vector(0 downto 0) := "0";
+signal U348_A_TRG_11 : std_logic_vector(0 downto 0) := "0";
+signal U349_A_TRG_12 : std_logic_vector(0 downto 0) := "0";
+signal U350_A_TRG_13 : std_logic_vector(0 downto 0) := "0";
+signal U351_A_TRG_14 : std_logic_vector(0 downto 0) := "0";
+signal U352_A_TRG_15 : std_logic_vector(0 downto 0) := "0";
+signal U353_A_TRG_16 : std_logic_vector(0 downto 0) := "0";
+signal U354_A_TRG_17 : std_logic_vector(0 downto 0) := "0";
+signal U355_A_TRG_18 : std_logic_vector(0 downto 0) := "0";
+signal U356_A_TRG_19 : std_logic_vector(0 downto 0) := "0";
+signal U357_A_TRG_20 : std_logic_vector(0 downto 0) := "0";
+signal U358_A_TRG_21 : std_logic_vector(0 downto 0) := "0";
+signal U359_A_TRG_22 : std_logic_vector(0 downto 0) := "0";
+signal U360_A_TRG_23 : std_logic_vector(0 downto 0) := "0";
+signal U361_A_TRG_24 : std_logic_vector(0 downto 0) := "0";
+signal U362_A_TRG_25 : std_logic_vector(0 downto 0) := "0";
+signal U363_A_TRG_26 : std_logic_vector(0 downto 0) := "0";
+signal U364_A_TRG_27 : std_logic_vector(0 downto 0) := "0";
+signal U365_A_TRG_28 : std_logic_vector(0 downto 0) := "0";
+signal U366_A_TRG_29 : std_logic_vector(0 downto 0) := "0";
+signal U367_A_TRG_30 : std_logic_vector(0 downto 0) := "0";
+signal U368_A_TRG_31 : std_logic_vector(0 downto 0) := "0";
+signal U369_B_TRG_0 : std_logic_vector(0 downto 0) := "0";
+signal U370_B_TRG_1 : std_logic_vector(0 downto 0) := "0";
+signal U371_B_TRG_2 : std_logic_vector(0 downto 0) := "0";
+signal U372_B_TRG_3 : std_logic_vector(0 downto 0) := "0";
+signal U373_B_TRG_4 : std_logic_vector(0 downto 0) := "0";
+signal U374_B_TRG_5 : std_logic_vector(0 downto 0) := "0";
+signal U375_B_TRG_6 : std_logic_vector(0 downto 0) := "0";
+signal U376_B_TRG_7 : std_logic_vector(0 downto 0) := "0";
+signal U377_B_TRG_8 : std_logic_vector(0 downto 0) := "0";
+signal U378_B_TRG_9 : std_logic_vector(0 downto 0) := "0";
+signal U379_B_TRG_10 : std_logic_vector(0 downto 0) := "0";
+signal U380_B_TRG_11 : std_logic_vector(0 downto 0) := "0";
+signal U381_B_TRG_12 : std_logic_vector(0 downto 0) := "0";
+signal U382_B_TRG_13 : std_logic_vector(0 downto 0) := "0";
+signal U383_B_TRG_14 : std_logic_vector(0 downto 0) := "0";
+signal U384_B_TRG_15 : std_logic_vector(0 downto 0) := "0";
+signal U385_B_TRG_16 : std_logic_vector(0 downto 0) := "0";
+signal U386_B_TRG_17 : std_logic_vector(0 downto 0) := "0";
+signal U387_B_TRG_18 : std_logic_vector(0 downto 0) := "0";
+signal U388_B_TRG_19 : std_logic_vector(0 downto 0) := "0";
+signal U389_B_TRG_20 : std_logic_vector(0 downto 0) := "0";
+signal U390_B_TRG_21 : std_logic_vector(0 downto 0) := "0";
+signal U391_B_TRG_22 : std_logic_vector(0 downto 0) := "0";
+signal U392_B_TRG_23 : std_logic_vector(0 downto 0) := "0";
+signal U393_B_TRG_24 : std_logic_vector(0 downto 0) := "0";
+signal U394_B_TRG_25 : std_logic_vector(0 downto 0) := "0";
+signal U395_B_TRG_26 : std_logic_vector(0 downto 0) := "0";
+signal U396_B_TRG_27 : std_logic_vector(0 downto 0) := "0";
+signal U397_B_TRG_28 : std_logic_vector(0 downto 0) := "0";
+signal U398_B_TRG_29 : std_logic_vector(0 downto 0) := "0";
+signal U399_B_TRG_30 : std_logic_vector(0 downto 0) := "0";
+signal U400_B_TRG_31 : std_logic_vector(0 downto 0) := "0";
+signal U401_C_TRG_0 : std_logic_vector(0 downto 0) := "0";
+signal U402_C_TRG_1 : std_logic_vector(0 downto 0) := "0";
+signal U403_C_TRG_2 : std_logic_vector(0 downto 0) := "0";
+signal U404_C_TRG_3 : std_logic_vector(0 downto 0) := "0";
+signal U405_C_TRG_4 : std_logic_vector(0 downto 0) := "0";
+signal U406_C_TRG_5 : std_logic_vector(0 downto 0) := "0";
+signal U407_C_TRG_6 : std_logic_vector(0 downto 0) := "0";
+signal U408_C_TRG_7 : std_logic_vector(0 downto 0) := "0";
+signal U409_C_TRG_8 : std_logic_vector(0 downto 0) := "0";
+signal U410_C_TRG_9 : std_logic_vector(0 downto 0) := "0";
+signal U411_C_TRG_10 : std_logic_vector(0 downto 0) := "0";
+signal U412_C_TRG_11 : std_logic_vector(0 downto 0) := "0";
+signal U413_C_TRG_12 : std_logic_vector(0 downto 0) := "0";
+signal U414_C_TRG_13 : std_logic_vector(0 downto 0) := "0";
+signal U415_C_TRG_14 : std_logic_vector(0 downto 0) := "0";
+signal U416_C_TRG_15 : std_logic_vector(0 downto 0) := "0";
+signal U417_C_TRG_16 : std_logic_vector(0 downto 0) := "0";
+signal U418_C_TRG_17 : std_logic_vector(0 downto 0) := "0";
+signal U419_C_TRG_18 : std_logic_vector(0 downto 0) := "0";
+signal U420_C_TRG_19 : std_logic_vector(0 downto 0) := "0";
+signal U421_C_TRG_20 : std_logic_vector(0 downto 0) := "0";
+signal U422_C_TRG_21 : std_logic_vector(0 downto 0) := "0";
+signal U423_C_TRG_22 : std_logic_vector(0 downto 0) := "0";
+signal U424_C_TRG_23 : std_logic_vector(0 downto 0) := "0";
+signal U425_C_TRG_24 : std_logic_vector(0 downto 0) := "0";
+signal U426_C_TRG_25 : std_logic_vector(0 downto 0) := "0";
+signal U427_C_TRG_26 : std_logic_vector(0 downto 0) := "0";
+signal U428_C_TRG_27 : std_logic_vector(0 downto 0) := "0";
+signal U429_C_TRG_28 : std_logic_vector(0 downto 0) := "0";
+signal U430_C_TRG_29 : std_logic_vector(0 downto 0) := "0";
+signal U431_C_TRG_30 : std_logic_vector(0 downto 0) := "0";
+signal U432_C_TRG_31 : std_logic_vector(0 downto 0) := "0";
+signal U433_D_TRG_0 : std_logic_vector(0 downto 0) := "0";
+signal U434_D_TRG_1 : std_logic_vector(0 downto 0) := "0";
+signal U435_D_TRG_2 : std_logic_vector(0 downto 0) := "0";
+signal U436_D_TRG_3 : std_logic_vector(0 downto 0) := "0";
+signal U437_D_TRG_4 : std_logic_vector(0 downto 0) := "0";
+signal U438_D_TRG_5 : std_logic_vector(0 downto 0) := "0";
+signal U439_D_TRG_6 : std_logic_vector(0 downto 0) := "0";
+signal U440_D_TRG_7 : std_logic_vector(0 downto 0) := "0";
+signal U441_D_TRG_8 : std_logic_vector(0 downto 0) := "0";
+signal U442_D_TRG_9 : std_logic_vector(0 downto 0) := "0";
+signal U443_D_TRG_10 : std_logic_vector(0 downto 0) := "0";
+signal U444_D_TRG_11 : std_logic_vector(0 downto 0) := "0";
+signal U445_D_TRG_12 : std_logic_vector(0 downto 0) := "0";
+signal U446_D_TRG_13 : std_logic_vector(0 downto 0) := "0";
+signal U447_D_TRG_14 : std_logic_vector(0 downto 0) := "0";
+signal U448_D_TRG_15 : std_logic_vector(0 downto 0) := "0";
+signal U449_D_TRG_16 : std_logic_vector(0 downto 0) := "0";
+signal U450_D_TRG_17 : std_logic_vector(0 downto 0) := "0";
+signal U451_D_TRG_18 : std_logic_vector(0 downto 0) := "0";
+signal U452_D_TRG_19 : std_logic_vector(0 downto 0) := "0";
+signal U453_D_TRG_20 : std_logic_vector(0 downto 0) := "0";
+signal U454_D_TRG_21 : std_logic_vector(0 downto 0) := "0";
+signal U455_D_TRG_22 : std_logic_vector(0 downto 0) := "0";
+signal U456_D_TRG_23 : std_logic_vector(0 downto 0) := "0";
+signal U457_D_TRG_24 : std_logic_vector(0 downto 0) := "0";
+signal U458_D_TRG_25 : std_logic_vector(0 downto 0) := "0";
+signal U459_D_TRG_26 : std_logic_vector(0 downto 0) := "0";
+signal U460_D_TRG_27 : std_logic_vector(0 downto 0) := "0";
+signal U461_D_TRG_28 : std_logic_vector(0 downto 0) := "0";
+signal U462_D_TRG_29 : std_logic_vector(0 downto 0) := "0";
+signal U463_D_TRG_30 : std_logic_vector(0 downto 0) := "0";
+signal U464_D_TRG_31 : std_logic_vector(0 downto 0) := "0";
+signal U465_PULSE : STD_LOGIC_VECTOR (0 DOWNTO 0);
+signal U466_out_0 : std_logic_vector(31 downto 0);
+signal U467_CONST : STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+signal U468_out : std_logic_vector(0 downto 0);
+signal U469_FR_FRAME_SIG : std_logic_vector (0 downto 0); 
+signal U470_FR_FRAME_SIG : std_logic_vector (0 downto 0); 
+signal U471_FR_FRAME_SIG : std_logic_vector (0 downto 0); 
+signal U472_FR_FRAME_SIG : std_logic_vector (0 downto 0); 
+signal U473_FR_FRAME_SIG : std_logic_vector (0 downto 0); 
+signal U475_OUT : STD_LOGIC_VECTOR (0 DOWNTO 0);
+signal U476_A_TS : std_logic_vector (63 downto 0); 
+signal variable_FR_FRAME_SIG : std_logic_vector (0 downto 0); 
+Component EDGE_DETECTOR_RE Is
+   Generic(bitSize : Integer := 1);
+   port(        Reset :  IN STD_LOGIC_VECTOR (0 DOWNTO 0);
+        CE: IN STD_LOGIC_VECTOR (0 DOWNTO 0);
+        CLK: IN STD_LOGIC_VECTOR (0 DOWNTO 0);
+        PORT_IN: IN STD_LOGIC_VECTOR(bitSize-1 DOWNTO 0);
+        PULSE_WIDTH: IN INTEGER;
+        PORT_OUT: OUT STD_LOGIC_VECTOR(bitSize - 1 DOWNTO 0)
+        );
+End component;
+signal U478_out : std_logic_vector(0 downto 0) := (others => '0');
+signal variable_vLEMO_7 : std_logic_vector (0 downto 0); 
+signal U480_vLEMO_7 : std_logic_vector (0 downto 0); 
+signal U481_counts : std_logic_vector(31 downto 0) := (others => '0');
+signal U482_out : std_logic_vector(0 downto 0) := (others => '0');
+signal U483_counts : std_logic_vector(31 downto 0) := (others => '0');
+signal U484_OUT : STD_LOGIC_VECTOR (0 DOWNTO 0);
+signal U485_OUT : STD_LOGIC_VECTOR (0 DOWNTO 0);
+COMPONENT comparator
+  GENERIC( 
+	IN_SIZE : INTEGER := 32;
+	IN_SIGN : STRING := "unsigned";
+	REGISTER_OUT : STRING := "false";
+	OPERATION : STRING := "smaller" );
+PORT( 
+	in1 : in STD_LOGIC_VECTOR(IN_SIZE-1 downto 0);
+	in2 : in STD_LOGIC_VECTOR(IN_SIZE-1 downto 0);
+	clk : in STD_LOGIC;
+	comp_out : out STD_LOGIC_VECTOR(0 downto 0) );
+END COMPONENT;
+signal U486_out : std_logic_vector(0 downto 0);
+signal U487_RUN_START : std_logic_vector (0 downto 0); 
+signal U488_OUT : STD_LOGIC_VECTOR (0 DOWNTO 0);
+signal variable_FT_CNT_EXT : std_logic_vector (31 downto 0); 
+signal variable_FT_CNT_WIN : std_logic_vector (31 downto 0); 
+signal U491_FT_CNT_EXT : std_logic_vector (31 downto 0); 
+signal U492_FT_CNT_WIN : std_logic_vector (31 downto 0); 
+signal U493_out_0 : std_logic_vector(31 downto 0);
+signal U494_out : std_logic_vector(0 downto 0);
+signal U495_PULSE : STD_LOGIC_VECTOR (0 DOWNTO 0);
+signal U496_CONST : STD_LOGIC_VECTOR(31 downto 0) := (others => '0');
+signal U497_out_0 : std_logic_vector(31 downto 0);
+signal U498_out_0 : std_logic_vector(1 downto 0);
+signal U499_hold : std_logic_vector(31 downto 0);
+signal U500_hold : std_logic_vector(31 downto 0);
+signal  U501_const_bin : std_logic_vector(0 downto 0) := "0";
+signal BUS_CP_0_READ_DATA : STD_LOGIC_VECTOR (31 DOWNTO 0);
+signal BUS_CP_0_VLD : STD_LOGIC_VECTOR (0 DOWNTO 0);
+signal REG_CP_0_READ_STATUS_RD : STD_LOGIC_VECTOR (31 DOWNTO 0);
+signal REG_CP_0_READ_VALID_WORDS_RD : STD_LOGIC_VECTOR (31 DOWNTO 0);
+COMPONENT U503_custompacket
+  GENERIC( 
+	memLength : INTEGER := 32768;
+	wordWidth : INTEGER := 32 );
+PORT( 
+	IN_1 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_2 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_3 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_4 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_5 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_6 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_7 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_8 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_9 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_10 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_11 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_12 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_13 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_14 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_15 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_16 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_17 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_18 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_19 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_20 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_21 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_22 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_23 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_24 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_25 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_26 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_27 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_28 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_29 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_30 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_31 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_32 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_33 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_34 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_35 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_36 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_37 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_38 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_39 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_40 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_41 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_42 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_43 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_44 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_45 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_46 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_47 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_48 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_49 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_50 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_51 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_52 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_53 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_54 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_55 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_56 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_57 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_58 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_59 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_60 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_61 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_62 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_63 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_64 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_65 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_66 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_67 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_68 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_69 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_70 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_71 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_72 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_73 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_74 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_75 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_76 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_77 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_78 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_79 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_80 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_81 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_82 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_83 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_84 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_85 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_86 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_87 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_88 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_89 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_90 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_91 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_92 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_93 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_94 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_95 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_96 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_97 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_98 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_99 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_100 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_101 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_102 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_103 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_104 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_105 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_106 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_107 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_108 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_109 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_110 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_111 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_112 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_113 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_114 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_115 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_116 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_117 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_118 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_119 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_120 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_121 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_122 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_123 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_124 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_125 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_126 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_127 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_128 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_129 : in STD_LOGIC_VECTOR(63 downto 0);
+	IN_130 : in STD_LOGIC_VECTOR(31 downto 0);
+	IN_131 : in STD_LOGIC_VECTOR(31 downto 0);
+	TRIG : in STD_LOGIC_VECTOR(0 downto 0);
+	CLK_WRITE : in STD_LOGIC_VECTOR(0 downto 0);
+	SYNC_TRIG : in STD_LOGIC_VECTOR(0 downto 0);
+	SYNC_RESET : in STD_LOGIC_VECTOR(0 downto 0);
+	SYNC_CLK : in STD_LOGIC_VECTOR(0 downto 0);
+	BUSY : out STD_LOGIC_VECTOR(0 downto 0);
+	FIFO_FULL : out STD_LOGIC_VECTOR(0 downto 0);
+	RESET : in STD_LOGIC_VECTOR(0 downto 0);
+	CLK_READ : in STD_LOGIC_VECTOR(0 downto 0);
+	READ_DATA : out STD_LOGIC_VECTOR(31 downto 0);
+	READ_DATAVALID : out STD_LOGIC_VECTOR(0 downto 0);
+	READ_RD_INT : in STD_LOGIC_VECTOR(0 downto 0);
+	READ_STATUS : out STD_LOGIC_VECTOR(31 downto 0);
+	READ_VALID_WORDS : out STD_LOGIC_VECTOR(31 downto 0);
+	CONFIG : in STD_LOGIC_VECTOR(31 downto 0) );
+END COMPONENT;
 	signal BUS_i2c_master_0_READ_ADDRESS : STD_LOGIC_VECTOR(-1 downto 0);
 	signal BUS_i2c_master_0_READ_DATA : STD_LOGIC_VECTOR(31 downto 0);
 	signal BUS_i2c_master_0_WRITE_DATA : STD_LOGIC_VECTOR(31 downto 0);
@@ -2726,6 +3315,14 @@ signal U332_TRIG_EXT_OUT : std_logic_vector(0 downto 0);
 	signal INT_Oscilloscope_3_CONFIG_ARM_WR : STD_LOGIC_VECTOR(0 downto 0);
 	signal REG_Oscilloscope_3_CONFIG_DECIMATOR_WR : STD_LOGIC_VECTOR(31 downto 0);
 	signal INT_Oscilloscope_3_CONFIG_DECIMATOR_WR : STD_LOGIC_VECTOR(0 downto 0);
+	signal BUS_CP_0_READ_ADDRESS : STD_LOGIC_VECTOR(-1 downto 0);
+	signal BUS_CP_0_WRITE_DATA : STD_LOGIC_VECTOR(31 downto 0);
+	signal BUS_CP_0_W_INT : STD_LOGIC_VECTOR(0 downto 0);
+	signal BUS_CP_0_R_INT : STD_LOGIC_VECTOR(0 downto 0);
+	signal INT_CP_0_READ_STATUS_RD : STD_LOGIC_VECTOR(0 downto 0);
+	signal INT_CP_0_READ_VALID_WORDS_RD : STD_LOGIC_VECTOR(0 downto 0);
+	signal REG_CP_0_CONFIG_WR : STD_LOGIC_VECTOR(31 downto 0);
+	signal INT_CP_0_CONFIG_WR : STD_LOGIC_VECTOR(0 downto 0);
 	signal REG_TRIG_A_SEL_RD : STD_LOGIC_VECTOR(31 downto 0) := x"00000000"; 
 	signal REG_TRIG_A_SEL_WR : STD_LOGIC_VECTOR(31 downto 0) := x"00000000"; 
 	signal INT_TRIG_A_SEL_WR : STD_LOGIC_VECTOR(0 downto 0); 
@@ -2858,6 +3455,30 @@ signal U332_TRIG_EXT_OUT : std_logic_vector(0 downto 0);
 	signal REG_HOLD_TIME_WR : STD_LOGIC_VECTOR(31 downto 0) := x"00000000"; 
 	signal INT_HOLD_TIME_WR : STD_LOGIC_VECTOR(0 downto 0); 
 	signal INT_HOLD_TIME_RD : STD_LOGIC_VECTOR(0 downto 0); 
+	signal REG_FR_IFP_RD : STD_LOGIC_VECTOR(31 downto 0) := x"00000000"; 
+	signal REG_FR_IFP_WR : STD_LOGIC_VECTOR(31 downto 0) := x"00000000"; 
+	signal INT_FR_IFP_WR : STD_LOGIC_VECTOR(0 downto 0); 
+	signal INT_FR_IFP_RD : STD_LOGIC_VECTOR(0 downto 0); 
+	signal REG_FR_LIMIT_RD : STD_LOGIC_VECTOR(31 downto 0) := x"00000000"; 
+	signal REG_FR_LIMIT_WR : STD_LOGIC_VECTOR(31 downto 0) := x"00000000"; 
+	signal INT_FR_LIMIT_WR : STD_LOGIC_VECTOR(0 downto 0); 
+	signal INT_FR_LIMIT_RD : STD_LOGIC_VECTOR(0 downto 0); 
+	signal REG_FR_IFP2_RD : STD_LOGIC_VECTOR(31 downto 0) := x"00000000"; 
+	signal REG_FR_IFP2_WR : STD_LOGIC_VECTOR(31 downto 0) := x"00000000"; 
+	signal INT_FR_IFP2_WR : STD_LOGIC_VECTOR(0 downto 0); 
+	signal INT_FR_IFP2_RD : STD_LOGIC_VECTOR(0 downto 0); 
+	signal REG_FR_MODE_RD : STD_LOGIC_VECTOR(31 downto 0) := x"00000000"; 
+	signal REG_FR_MODE_WR : STD_LOGIC_VECTOR(31 downto 0) := x"00000000"; 
+	signal INT_FR_MODE_WR : STD_LOGIC_VECTOR(0 downto 0); 
+	signal INT_FR_MODE_RD : STD_LOGIC_VECTOR(0 downto 0); 
+	signal REG_FR_DBG1_RD : STD_LOGIC_VECTOR(31 downto 0) := x"00000000"; 
+	signal REG_FR_DBG1_WR : STD_LOGIC_VECTOR(31 downto 0) := x"00000000"; 
+	signal INT_FR_DBG1_WR : STD_LOGIC_VECTOR(0 downto 0); 
+	signal INT_FR_DBG1_RD : STD_LOGIC_VECTOR(0 downto 0); 
+	signal REG_FR_DBG2_RD : STD_LOGIC_VECTOR(31 downto 0) := x"00000000"; 
+	signal REG_FR_DBG2_WR : STD_LOGIC_VECTOR(31 downto 0) := x"00000000"; 
+	signal INT_FR_DBG2_WR : STD_LOGIC_VECTOR(0 downto 0); 
+	signal INT_FR_DBG2_RD : STD_LOGIC_VECTOR(0 downto 0); 
 
 	
 begin
@@ -3555,6 +4176,41 @@ begin
 		REG_HOLD_TIME_WR => REG_HOLD_TIME_WR,
 		INT_HOLD_TIME_RD => INT_HOLD_TIME_RD,
 		INT_HOLD_TIME_WR => INT_HOLD_TIME_WR,
+		REG_FR_IFP_RD => REG_FR_IFP_RD,
+		REG_FR_IFP_WR => REG_FR_IFP_WR,
+		INT_FR_IFP_RD => INT_FR_IFP_RD,
+		INT_FR_IFP_WR => INT_FR_IFP_WR,
+		REG_FR_LIMIT_RD => REG_FR_LIMIT_RD,
+		REG_FR_LIMIT_WR => REG_FR_LIMIT_WR,
+		INT_FR_LIMIT_RD => INT_FR_LIMIT_RD,
+		INT_FR_LIMIT_WR => INT_FR_LIMIT_WR,
+		REG_FR_IFP2_RD => REG_FR_IFP2_RD,
+		REG_FR_IFP2_WR => REG_FR_IFP2_WR,
+		INT_FR_IFP2_RD => INT_FR_IFP2_RD,
+		INT_FR_IFP2_WR => INT_FR_IFP2_WR,
+		REG_FR_MODE_RD => REG_FR_MODE_RD,
+		REG_FR_MODE_WR => REG_FR_MODE_WR,
+		INT_FR_MODE_RD => INT_FR_MODE_RD,
+		INT_FR_MODE_WR => INT_FR_MODE_WR,
+		REG_FR_DBG1_RD => REG_FR_DBG1_RD,
+		REG_FR_DBG1_WR => REG_FR_DBG1_WR,
+		INT_FR_DBG1_RD => INT_FR_DBG1_RD,
+		INT_FR_DBG1_WR => INT_FR_DBG1_WR,
+		REG_FR_DBG2_RD => REG_FR_DBG2_RD,
+		REG_FR_DBG2_WR => REG_FR_DBG2_WR,
+		INT_FR_DBG2_RD => INT_FR_DBG2_RD,
+		INT_FR_DBG2_WR => INT_FR_DBG2_WR,
+	BUS_CP_0_READ_DATA => BUS_CP_0_READ_DATA,
+	BUS_CP_0_WRITE_DATA => BUS_CP_0_WRITE_DATA,
+	BUS_CP_0_W_INT => BUS_CP_0_W_INT,
+	BUS_CP_0_R_INT => BUS_CP_0_R_INT,
+	BUS_CP_0_VLD => BUS_CP_0_VLD,
+		REG_CP_0_READ_STATUS_RD => REG_CP_0_READ_STATUS_RD,
+		INT_CP_0_READ_STATUS_RD => INT_CP_0_READ_STATUS_RD,
+		REG_CP_0_READ_VALID_WORDS_RD => REG_CP_0_READ_VALID_WORDS_RD,
+		INT_CP_0_READ_VALID_WORDS_RD => INT_CP_0_READ_VALID_WORDS_RD,
+		REG_CP_0_CONFIG_WR => REG_CP_0_CONFIG_WR,
+		INT_CP_0_CONFIG_WR => INT_CP_0_CONFIG_WR,
 		REG_UNIQUE_RD => x"00112244",
 		REG_UNIQUE_WR => open,
    
@@ -4692,6 +5348,7 @@ variable_G_TS <= U194_TIMESTAMP;
 variable_G_TS0 <= U193_TIMESTAMP;
 LEMO_6_7_DIRECTION <= U198_const_bin;
 U197_LEMO_6_7_A_OUT <= LEMO_6_7_A_OUT;
+U197_LEMO_6_7_B_OUT <= LEMO_6_7_B_OUT;
 U197_LEMO_6_7_B_OUT <= LEMO_6_7_B_OUT;
 U197_LEMO_6_7_B_OUT <= LEMO_6_7_B_OUT;
 U199 : COUNTER_RISING
@@ -6007,6 +6664,755 @@ PORT MAP(
     GlobalClock=>GlobalClock ,
     async_clk => async_clk 
 );
+
+U333:SUBPAGE_Framing
+PORT MAP(
+	T_0 => U337_A_TRG_0,
+	T_1 => U338_A_TRG_1,
+	T_2 => U339_A_TRG_2,
+	T_3 => U340_A_TRG_3,
+	T_4 => U341_A_TRG_4,
+	T_5 => U342_A_TRG_5,
+	T_6 => U343_A_TRG_6,
+	T_7 => U344_A_TRG_7,
+	T_8 => U345_A_TRG_8,
+	T_9 => U346_A_TRG_9,
+	T_10 => U347_A_TRG_10,
+	T_11 => U348_A_TRG_11,
+	T_12 => U349_A_TRG_12,
+	T_13 => U350_A_TRG_13,
+	T_14 => U351_A_TRG_14,
+	T_15 => U352_A_TRG_15,
+	T_16 => U353_A_TRG_16,
+	T_17 => U354_A_TRG_17,
+	T_18 => U355_A_TRG_18,
+	T_19 => U356_A_TRG_19,
+	T_20 => U357_A_TRG_20,
+	T_21 => U358_A_TRG_21,
+	T_22 => U359_A_TRG_22,
+	T_23 => U360_A_TRG_23,
+	T_24 => U361_A_TRG_24,
+	T_25 => U362_A_TRG_25,
+	T_26 => U363_A_TRG_26,
+	T_27 => U364_A_TRG_27,
+	T_28 => U365_A_TRG_28,
+	T_29 => U366_A_TRG_29,
+	T_30 => U367_A_TRG_30,
+	T_31 => U368_A_TRG_31,
+	FRAME => U472_FR_FRAME_SIG,
+	C_0 => U333_C_0,
+	C_1 => U333_C_1,
+	C_2 => U333_C_2,
+	C_3 => U333_C_3,
+	C_4 => U333_C_4,
+	C_5 => U333_C_5,
+	C_6 => U333_C_6,
+	C_7 => U333_C_7,
+	C_8 => U333_C_8,
+	C_9 => U333_C_9,
+	C_10 => U333_C_10,
+	C_11 => U333_C_11,
+	C_12 => U333_C_12,
+	C_13 => U333_C_13,
+	C_14 => U333_C_14,
+	C_15 => U333_C_15,
+	C_16 => U333_C_16,
+	C_17 => U333_C_17,
+	C_18 => U333_C_18,
+	C_19 => U333_C_19,
+	C_20 => U333_C_20,
+	C_21 => U333_C_21,
+	C_22 => U333_C_22,
+	C_23 => U333_C_23,
+	C_24 => U333_C_24,
+	C_25 => U333_C_25,
+	C_26 => U333_C_26,
+	C_27 => U333_C_27,
+	C_28 => U333_C_28,
+	C_29 => U333_C_29,
+	C_30 => U333_C_30,
+	C_31 => U333_C_31,
+    GlobalReset => GlobalReset,
+    CLK_ACQ=>CLK_ACQ ,
+    BUS_CLK=>BUS_CLK ,
+    CLK_40=>CLK_40 ,
+    CLK_80=>CLK_80 ,
+    clk_160=>clk_160 ,
+    clk_320=>clk_320 ,
+    FAST_CLK_100=>FAST_CLK_100 ,
+    FAST_CLK_200=>FAST_CLK_200 ,
+    FAST_CLK_250=>FAST_CLK_250 ,
+    FAST_CLK_250_90=>FAST_CLK_250_90 ,
+    FAST_CLK_500=>FAST_CLK_500 ,
+    FAST_CLK_500_90=>FAST_CLK_500_90 ,
+    GlobalClock=>GlobalClock ,
+    async_clk => async_clk 
+);
+
+U334:SUBPAGE_Framing
+PORT MAP(
+	T_0 => U401_C_TRG_0,
+	T_1 => U402_C_TRG_1,
+	T_2 => U403_C_TRG_2,
+	T_3 => U404_C_TRG_3,
+	T_4 => U405_C_TRG_4,
+	T_5 => U406_C_TRG_5,
+	T_6 => U407_C_TRG_6,
+	T_7 => U408_C_TRG_7,
+	T_8 => U409_C_TRG_8,
+	T_9 => U410_C_TRG_9,
+	T_10 => U411_C_TRG_10,
+	T_11 => U412_C_TRG_11,
+	T_12 => U413_C_TRG_12,
+	T_13 => U414_C_TRG_13,
+	T_14 => U415_C_TRG_14,
+	T_15 => U416_C_TRG_15,
+	T_16 => U417_C_TRG_16,
+	T_17 => U418_C_TRG_17,
+	T_18 => U419_C_TRG_18,
+	T_19 => U420_C_TRG_19,
+	T_20 => U421_C_TRG_20,
+	T_21 => U422_C_TRG_21,
+	T_22 => U423_C_TRG_22,
+	T_23 => U424_C_TRG_23,
+	T_24 => U425_C_TRG_24,
+	T_25 => U426_C_TRG_25,
+	T_26 => U427_C_TRG_26,
+	T_27 => U428_C_TRG_27,
+	T_28 => U429_C_TRG_28,
+	T_29 => U430_C_TRG_29,
+	T_30 => U431_C_TRG_30,
+	T_31 => U432_C_TRG_31,
+	FRAME => U470_FR_FRAME_SIG,
+	C_0 => U334_C_0,
+	C_1 => U334_C_1,
+	C_2 => U334_C_2,
+	C_3 => U334_C_3,
+	C_4 => U334_C_4,
+	C_5 => U334_C_5,
+	C_6 => U334_C_6,
+	C_7 => U334_C_7,
+	C_8 => U334_C_8,
+	C_9 => U334_C_9,
+	C_10 => U334_C_10,
+	C_11 => U334_C_11,
+	C_12 => U334_C_12,
+	C_13 => U334_C_13,
+	C_14 => U334_C_14,
+	C_15 => U334_C_15,
+	C_16 => U334_C_16,
+	C_17 => U334_C_17,
+	C_18 => U334_C_18,
+	C_19 => U334_C_19,
+	C_20 => U334_C_20,
+	C_21 => U334_C_21,
+	C_22 => U334_C_22,
+	C_23 => U334_C_23,
+	C_24 => U334_C_24,
+	C_25 => U334_C_25,
+	C_26 => U334_C_26,
+	C_27 => U334_C_27,
+	C_28 => U334_C_28,
+	C_29 => U334_C_29,
+	C_30 => U334_C_30,
+	C_31 => U334_C_31,
+    GlobalReset => GlobalReset,
+    CLK_ACQ=>CLK_ACQ ,
+    BUS_CLK=>BUS_CLK ,
+    CLK_40=>CLK_40 ,
+    CLK_80=>CLK_80 ,
+    clk_160=>clk_160 ,
+    clk_320=>clk_320 ,
+    FAST_CLK_100=>FAST_CLK_100 ,
+    FAST_CLK_200=>FAST_CLK_200 ,
+    FAST_CLK_250=>FAST_CLK_250 ,
+    FAST_CLK_250_90=>FAST_CLK_250_90 ,
+    FAST_CLK_500=>FAST_CLK_500 ,
+    FAST_CLK_500_90=>FAST_CLK_500_90 ,
+    GlobalClock=>GlobalClock ,
+    async_clk => async_clk 
+);
+
+U335:SUBPAGE_Framing
+PORT MAP(
+	T_0 => U369_B_TRG_0,
+	T_1 => U370_B_TRG_1,
+	T_2 => U371_B_TRG_2,
+	T_3 => U372_B_TRG_3,
+	T_4 => U373_B_TRG_4,
+	T_5 => U374_B_TRG_5,
+	T_6 => U375_B_TRG_6,
+	T_7 => U376_B_TRG_7,
+	T_8 => U377_B_TRG_8,
+	T_9 => U378_B_TRG_9,
+	T_10 => U379_B_TRG_10,
+	T_11 => U380_B_TRG_11,
+	T_12 => U381_B_TRG_12,
+	T_13 => U382_B_TRG_13,
+	T_14 => U383_B_TRG_14,
+	T_15 => U384_B_TRG_15,
+	T_16 => U385_B_TRG_16,
+	T_17 => U386_B_TRG_17,
+	T_18 => U387_B_TRG_18,
+	T_19 => U388_B_TRG_19,
+	T_20 => U389_B_TRG_20,
+	T_21 => U390_B_TRG_21,
+	T_22 => U391_B_TRG_22,
+	T_23 => U392_B_TRG_23,
+	T_24 => U393_B_TRG_24,
+	T_25 => U394_B_TRG_25,
+	T_26 => U395_B_TRG_26,
+	T_27 => U396_B_TRG_27,
+	T_28 => U397_B_TRG_28,
+	T_29 => U398_B_TRG_29,
+	T_30 => U399_B_TRG_30,
+	T_31 => U400_B_TRG_31,
+	FRAME => U471_FR_FRAME_SIG,
+	C_0 => U335_C_0,
+	C_1 => U335_C_1,
+	C_2 => U335_C_2,
+	C_3 => U335_C_3,
+	C_4 => U335_C_4,
+	C_5 => U335_C_5,
+	C_6 => U335_C_6,
+	C_7 => U335_C_7,
+	C_8 => U335_C_8,
+	C_9 => U335_C_9,
+	C_10 => U335_C_10,
+	C_11 => U335_C_11,
+	C_12 => U335_C_12,
+	C_13 => U335_C_13,
+	C_14 => U335_C_14,
+	C_15 => U335_C_15,
+	C_16 => U335_C_16,
+	C_17 => U335_C_17,
+	C_18 => U335_C_18,
+	C_19 => U335_C_19,
+	C_20 => U335_C_20,
+	C_21 => U335_C_21,
+	C_22 => U335_C_22,
+	C_23 => U335_C_23,
+	C_24 => U335_C_24,
+	C_25 => U335_C_25,
+	C_26 => U335_C_26,
+	C_27 => U335_C_27,
+	C_28 => U335_C_28,
+	C_29 => U335_C_29,
+	C_30 => U335_C_30,
+	C_31 => U335_C_31,
+    GlobalReset => GlobalReset,
+    CLK_ACQ=>CLK_ACQ ,
+    BUS_CLK=>BUS_CLK ,
+    CLK_40=>CLK_40 ,
+    CLK_80=>CLK_80 ,
+    clk_160=>clk_160 ,
+    clk_320=>clk_320 ,
+    FAST_CLK_100=>FAST_CLK_100 ,
+    FAST_CLK_200=>FAST_CLK_200 ,
+    FAST_CLK_250=>FAST_CLK_250 ,
+    FAST_CLK_250_90=>FAST_CLK_250_90 ,
+    FAST_CLK_500=>FAST_CLK_500 ,
+    FAST_CLK_500_90=>FAST_CLK_500_90 ,
+    GlobalClock=>GlobalClock ,
+    async_clk => async_clk 
+);
+
+U336:SUBPAGE_Framing
+PORT MAP(
+	T_0 => U433_D_TRG_0,
+	T_1 => U434_D_TRG_1,
+	T_2 => U435_D_TRG_2,
+	T_3 => U436_D_TRG_3,
+	T_4 => U437_D_TRG_4,
+	T_5 => U438_D_TRG_5,
+	T_6 => U439_D_TRG_6,
+	T_7 => U440_D_TRG_7,
+	T_8 => U441_D_TRG_8,
+	T_9 => U442_D_TRG_9,
+	T_10 => U443_D_TRG_10,
+	T_11 => U444_D_TRG_11,
+	T_12 => U445_D_TRG_12,
+	T_13 => U446_D_TRG_13,
+	T_14 => U447_D_TRG_14,
+	T_15 => U448_D_TRG_15,
+	T_16 => U449_D_TRG_16,
+	T_17 => U450_D_TRG_17,
+	T_18 => U451_D_TRG_18,
+	T_19 => U452_D_TRG_19,
+	T_20 => U453_D_TRG_20,
+	T_21 => U454_D_TRG_21,
+	T_22 => U455_D_TRG_22,
+	T_23 => U456_D_TRG_23,
+	T_24 => U457_D_TRG_24,
+	T_25 => U458_D_TRG_25,
+	T_26 => U459_D_TRG_26,
+	T_27 => U460_D_TRG_27,
+	T_28 => U461_D_TRG_28,
+	T_29 => U462_D_TRG_29,
+	T_30 => U463_D_TRG_30,
+	T_31 => U464_D_TRG_31,
+	FRAME => U469_FR_FRAME_SIG,
+	C_0 => U336_C_0,
+	C_1 => U336_C_1,
+	C_2 => U336_C_2,
+	C_3 => U336_C_3,
+	C_4 => U336_C_4,
+	C_5 => U336_C_5,
+	C_6 => U336_C_6,
+	C_7 => U336_C_7,
+	C_8 => U336_C_8,
+	C_9 => U336_C_9,
+	C_10 => U336_C_10,
+	C_11 => U336_C_11,
+	C_12 => U336_C_12,
+	C_13 => U336_C_13,
+	C_14 => U336_C_14,
+	C_15 => U336_C_15,
+	C_16 => U336_C_16,
+	C_17 => U336_C_17,
+	C_18 => U336_C_18,
+	C_19 => U336_C_19,
+	C_20 => U336_C_20,
+	C_21 => U336_C_21,
+	C_22 => U336_C_22,
+	C_23 => U336_C_23,
+	C_24 => U336_C_24,
+	C_25 => U336_C_25,
+	C_26 => U336_C_26,
+	C_27 => U336_C_27,
+	C_28 => U336_C_28,
+	C_29 => U336_C_29,
+	C_30 => U336_C_30,
+	C_31 => U336_C_31,
+    GlobalReset => GlobalReset,
+    CLK_ACQ=>CLK_ACQ ,
+    BUS_CLK=>BUS_CLK ,
+    CLK_40=>CLK_40 ,
+    CLK_80=>CLK_80 ,
+    clk_160=>clk_160 ,
+    clk_320=>clk_320 ,
+    FAST_CLK_100=>FAST_CLK_100 ,
+    FAST_CLK_200=>FAST_CLK_200 ,
+    FAST_CLK_250=>FAST_CLK_250 ,
+    FAST_CLK_250_90=>FAST_CLK_250_90 ,
+    FAST_CLK_500=>FAST_CLK_500 ,
+    FAST_CLK_500_90=>FAST_CLK_500_90 ,
+    GlobalClock=>GlobalClock ,
+    async_clk => async_clk 
+);
+U337_A_TRG_0 <= A_TRIG0;
+U338_A_TRG_1 <= A_TRIG1;
+U339_A_TRG_2 <= A_TRIG2;
+U340_A_TRG_3 <= A_TRIG3;
+U341_A_TRG_4 <= A_TRIG4;
+U342_A_TRG_5 <= A_TRIG5;
+U343_A_TRG_6 <= A_TRIG6;
+U344_A_TRG_7 <= A_TRIG7;
+U345_A_TRG_8 <= A_TRIG8;
+U346_A_TRG_9 <= A_TRIG9;
+U347_A_TRG_10 <= A_TRIG10;
+U348_A_TRG_11 <= A_TRIG11;
+U349_A_TRG_12 <= A_TRIG12;
+U350_A_TRG_13 <= A_TRIG13;
+U351_A_TRG_14 <= A_TRIG14;
+U352_A_TRG_15 <= A_TRIG15;
+U353_A_TRG_16 <= A_TRIG16;
+U354_A_TRG_17 <= A_TRIG17;
+U355_A_TRG_18 <= A_TRIG18;
+U356_A_TRG_19 <= A_TRIG19;
+U357_A_TRG_20 <= A_TRIG20;
+U358_A_TRG_21 <= A_TRIG21;
+U359_A_TRG_22 <= A_TRIG22;
+U360_A_TRG_23 <= A_TRIG23;
+U361_A_TRG_24 <= A_TRIG24;
+U362_A_TRG_25 <= A_TRIG25;
+U363_A_TRG_26 <= A_TRIG26;
+U364_A_TRG_27 <= A_TRIG27;
+U365_A_TRG_28 <= A_TRIG28;
+U366_A_TRG_29 <= A_TRIG29;
+U367_A_TRG_30 <= A_TRIG30;
+U368_A_TRG_31 <= A_TRIG31;
+U369_B_TRG_0 <= B_TRIG0;
+U370_B_TRG_1 <= B_TRIG1;
+U371_B_TRG_2 <= B_TRIG2;
+U372_B_TRG_3 <= B_TRIG3;
+U373_B_TRG_4 <= B_TRIG4;
+U374_B_TRG_5 <= B_TRIG5;
+U375_B_TRG_6 <= B_TRIG6;
+U376_B_TRG_7 <= B_TRIG7;
+U377_B_TRG_8 <= B_TRIG8;
+U378_B_TRG_9 <= B_TRIG9;
+U379_B_TRG_10 <= B_TRIG10;
+U380_B_TRG_11 <= B_TRIG11;
+U381_B_TRG_12 <= B_TRIG12;
+U382_B_TRG_13 <= B_TRIG13;
+U383_B_TRG_14 <= B_TRIG14;
+U384_B_TRG_15 <= B_TRIG15;
+U385_B_TRG_16 <= B_TRIG16;
+U386_B_TRG_17 <= B_TRIG17;
+U387_B_TRG_18 <= B_TRIG18;
+U388_B_TRG_19 <= B_TRIG19;
+U389_B_TRG_20 <= B_TRIG20;
+U390_B_TRG_21 <= B_TRIG21;
+U391_B_TRG_22 <= B_TRIG22;
+U392_B_TRG_23 <= B_TRIG23;
+U393_B_TRG_24 <= B_TRIG24;
+U394_B_TRG_25 <= B_TRIG25;
+U395_B_TRG_26 <= B_TRIG26;
+U396_B_TRG_27 <= B_TRIG27;
+U397_B_TRG_28 <= B_TRIG28;
+U398_B_TRG_29 <= B_TRIG29;
+U399_B_TRG_30 <= B_TRIG30;
+U400_B_TRG_31 <= B_TRIG31;
+U401_C_TRG_0 <= C_TRIG0;
+U402_C_TRG_1 <= C_TRIG1;
+U403_C_TRG_2 <= C_TRIG2;
+U404_C_TRG_3 <= C_TRIG3;
+U405_C_TRG_4 <= C_TRIG4;
+U406_C_TRG_5 <= C_TRIG5;
+U407_C_TRG_6 <= C_TRIG6;
+U408_C_TRG_7 <= C_TRIG7;
+U409_C_TRG_8 <= C_TRIG8;
+U410_C_TRG_9 <= C_TRIG9;
+U411_C_TRG_10 <= C_TRIG10;
+U412_C_TRG_11 <= C_TRIG11;
+U413_C_TRG_12 <= C_TRIG12;
+U414_C_TRG_13 <= C_TRIG13;
+U415_C_TRG_14 <= C_TRIG14;
+U416_C_TRG_15 <= C_TRIG15;
+U417_C_TRG_16 <= C_TRIG16;
+U418_C_TRG_17 <= C_TRIG17;
+U419_C_TRG_18 <= C_TRIG18;
+U420_C_TRG_19 <= C_TRIG19;
+U421_C_TRG_20 <= C_TRIG20;
+U422_C_TRG_21 <= C_TRIG21;
+U423_C_TRG_22 <= C_TRIG22;
+U424_C_TRG_23 <= C_TRIG23;
+U425_C_TRG_24 <= C_TRIG24;
+U426_C_TRG_25 <= C_TRIG25;
+U427_C_TRG_26 <= C_TRIG26;
+U428_C_TRG_27 <= C_TRIG27;
+U429_C_TRG_28 <= C_TRIG28;
+U430_C_TRG_29 <= C_TRIG29;
+U431_C_TRG_30 <= C_TRIG30;
+U432_C_TRG_31 <= C_TRIG31;
+U433_D_TRG_0 <= D_TRIG0;
+U434_D_TRG_1 <= D_TRIG1;
+U435_D_TRG_2 <= D_TRIG2;
+U436_D_TRG_3 <= D_TRIG3;
+U437_D_TRG_4 <= D_TRIG4;
+U438_D_TRG_5 <= D_TRIG5;
+U439_D_TRG_6 <= D_TRIG6;
+U440_D_TRG_7 <= D_TRIG7;
+U441_D_TRG_8 <= D_TRIG8;
+U442_D_TRG_9 <= D_TRIG9;
+U443_D_TRG_10 <= D_TRIG10;
+U444_D_TRG_11 <= D_TRIG11;
+U445_D_TRG_12 <= D_TRIG12;
+U446_D_TRG_13 <= D_TRIG13;
+U447_D_TRG_14 <= D_TRIG14;
+U448_D_TRG_15 <= D_TRIG15;
+U449_D_TRG_16 <= D_TRIG16;
+U450_D_TRG_17 <= D_TRIG17;
+U451_D_TRG_18 <= D_TRIG18;
+U452_D_TRG_19 <= D_TRIG19;
+U453_D_TRG_20 <= D_TRIG20;
+U454_D_TRG_21 <= D_TRIG21;
+U455_D_TRG_22 <= D_TRIG22;
+U456_D_TRG_23 <= D_TRIG23;
+U457_D_TRG_24 <= D_TRIG24;
+U458_D_TRG_25 <= D_TRIG25;
+U459_D_TRG_26 <= D_TRIG26;
+U460_D_TRG_27 <= D_TRIG27;
+U461_D_TRG_28 <= D_TRIG28;
+U462_D_TRG_29 <= D_TRIG29;
+U463_D_TRG_30 <= D_TRIG30;
+U464_D_TRG_31 <= D_TRIG31;
+U465 : PULSE_GENERATOR
+PORT MAP(
+	PULSE_OUT => U465_PULSE,
+	PULSE_PERIOD => U466_out_0,
+	PULSE_WIDTH => U467_CONST,
+	CE => "1",
+	CLK => GlobalClock,
+	RESET => "0" );
+U466_out_0 <= REG_FR_IFP_WR(31 downto 0);
+U467_CONST <= conv_std_logic_vector(1,32);
+
+U468 : block
+begin
+U468_out <= U465_PULSE when U498_out_0 = "00" else U480_vLEMO_7 when U498_out_0 = "01" else U484_OUT when U498_out_0 = "10" else U484_OUT when U498_out_0 = "11"  else (others=>'0');
+
+end block;
+U469_FR_FRAME_SIG <= variable_FR_FRAME_SIG;
+U470_FR_FRAME_SIG <= variable_FR_FRAME_SIG;
+U471_FR_FRAME_SIG <= variable_FR_FRAME_SIG;
+U472_FR_FRAME_SIG <= variable_FR_FRAME_SIG;
+U473_FR_FRAME_SIG <= variable_FR_FRAME_SIG;
+U475 : d_latch
+  Generic map(
+	IN_SIZE => 	1,
+	EDGE => 	"rising")
+PORT MAP(
+	a => U473_FR_FRAME_SIG,
+	CE => '1',
+	clk => GlobalClock(0),
+	reset => '0',
+	reset_val => "0",
+	b => U475_OUT );
+U476_A_TS <= variable_A_TS;
+variable_FR_FRAME_SIG <= U478_out;
+U478 : EDGE_DETECTOR_RE
+    Generic map(bitSize => 1 )
+    port map( 
+        Reset => GlobalReset, 
+        CE => "1",
+        CLK => async_clk,
+        PORT_IN => U468_out,
+        PULSE_WIDTH => 1,
+        PORT_OUT => U478_out
+    );
+variable_vLEMO_7 <= U197_LEMO_6_7_B_OUT;
+U480_vLEMO_7 <= variable_vLEMO_7;
+U481 : COUNTER_RISING
+    Generic map(bitSize => 32 )
+    port map( 
+        RESET => U488_OUT, 
+        CE => "1",
+        CLK => async_clk,
+        SIGIN => U478_out,
+        ENABLE => "1",
+        COUNTER => U481_counts,
+        OVERFLOW => open
+    );
+U482 : EDGE_DETECTOR_RE
+    Generic map(bitSize => 1 )
+    port map( 
+        Reset => GlobalReset, 
+        CE => "1",
+        CLK => async_clk,
+        PORT_IN => U480_vLEMO_7,
+        PULSE_WIDTH => 1,
+        PORT_OUT => U482_out
+    );
+U483 : COUNTER_RISING
+    Generic map(bitSize => 32 )
+    port map( 
+        RESET => GlobalReset, 
+        CE => "1",
+        CLK => async_clk,
+        SIGIN => U494_out,
+        ENABLE => "1",
+        COUNTER => U483_counts,
+        OVERFLOW => open
+    );
+U484_OUT <= U485_OUT AND U465_PULSE;
+U485 : comparator
+  Generic map(
+	IN_SIZE => 	32,
+	IN_SIGN => 	"unsigned",
+	REGISTER_OUT => 	"false",
+	OPERATION => 	"smaller")
+PORT MAP(
+	in1 => U481_counts,
+	in2 => U493_out_0,
+	clk => GlobalClock(0),
+	comp_out => U485_OUT );
+
+U486 : block
+begin
+U486_out <= U487_RUN_START when U498_out_0 = "00" else U487_RUN_START when U498_out_0 = "01" else U494_out when U498_out_0 = "10" else U487_RUN_START when U498_out_0 = "11"  else (others=>'0');
+
+end block;
+U487_RUN_START <= variable_RUN_START;
+U488_OUT <= U487_RUN_START OR U486_out;
+variable_FT_CNT_EXT <= U483_counts;
+variable_FT_CNT_WIN <= U481_counts;
+U491_FT_CNT_EXT <= variable_FT_CNT_EXT;
+U492_FT_CNT_WIN <= variable_FT_CNT_WIN;
+U493_out_0 <= REG_FR_LIMIT_WR(31 downto 0);
+
+U494 : block
+begin
+U494_out <= U501_const_bin when U498_out_0 = "00" else U501_const_bin when U498_out_0 = "01" else U482_out when U498_out_0 = "10" else U495_PULSE when U498_out_0 = "11"  else (others=>'0');
+
+end block;
+U495 : PULSE_GENERATOR
+PORT MAP(
+	PULSE_OUT => U495_PULSE,
+	PULSE_PERIOD => U497_out_0,
+	PULSE_WIDTH => U496_CONST,
+	CE => "1",
+	CLK => GlobalClock,
+	RESET => "0" );
+U496_CONST <= conv_std_logic_vector(1,32);
+U497_out_0 <= REG_FR_IFP2_WR(31 downto 0);
+U498_out_0 <= REG_FR_MODE_WR(1 downto 0);
+PROCESS_REG_U499 : process(BUS_CLK,GlobalReset)
+begin
+    if rising_edge(BUS_CLK(0))  then
+         U499_hold <= EXT(U481_counts,32);
+    end if;
+end process;
+REG_FR_DBG1_RD <= EXT(U481_counts,32);
+PROCESS_REG_U500 : process(BUS_CLK,GlobalReset)
+begin
+    if rising_edge(BUS_CLK(0))  then
+         U500_hold <= EXT(U483_counts,32);
+    end if;
+end process;
+REG_FR_DBG2_RD <= EXT(U483_counts,32);
+U503 : U503_custompacket
+  Generic map(
+	memLength => 	32768,
+	wordWidth => 	32)
+PORT MAP(
+	IN_1 => U333_C_0,
+	IN_2 => U333_C_1,
+	IN_3 => U333_C_2,
+	IN_4 => U333_C_3,
+	IN_5 => U333_C_4,
+	IN_6 => U333_C_5,
+	IN_7 => U333_C_6,
+	IN_8 => U333_C_7,
+	IN_9 => U333_C_8,
+	IN_10 => U333_C_9,
+	IN_11 => U333_C_10,
+	IN_12 => U333_C_11,
+	IN_13 => U333_C_12,
+	IN_14 => U333_C_13,
+	IN_15 => U333_C_14,
+	IN_16 => U333_C_15,
+	IN_17 => U333_C_16,
+	IN_18 => U333_C_17,
+	IN_19 => U333_C_18,
+	IN_20 => U333_C_19,
+	IN_21 => U333_C_20,
+	IN_22 => U333_C_21,
+	IN_23 => U333_C_22,
+	IN_24 => U333_C_23,
+	IN_25 => U333_C_24,
+	IN_26 => U333_C_25,
+	IN_27 => U333_C_26,
+	IN_28 => U333_C_27,
+	IN_29 => U333_C_28,
+	IN_30 => U333_C_29,
+	IN_31 => U333_C_30,
+	IN_32 => U333_C_31,
+	IN_33 => U335_C_0,
+	IN_34 => U335_C_1,
+	IN_35 => U335_C_2,
+	IN_36 => U335_C_3,
+	IN_37 => U335_C_4,
+	IN_38 => U335_C_5,
+	IN_39 => U335_C_6,
+	IN_40 => U335_C_7,
+	IN_41 => U335_C_8,
+	IN_42 => U335_C_9,
+	IN_43 => U335_C_10,
+	IN_44 => U335_C_11,
+	IN_45 => U335_C_12,
+	IN_46 => U335_C_13,
+	IN_47 => U335_C_14,
+	IN_48 => U335_C_15,
+	IN_49 => U335_C_16,
+	IN_50 => U335_C_17,
+	IN_51 => U335_C_18,
+	IN_52 => U335_C_19,
+	IN_53 => U335_C_20,
+	IN_54 => U335_C_21,
+	IN_55 => U335_C_22,
+	IN_56 => U335_C_23,
+	IN_57 => U335_C_24,
+	IN_58 => U335_C_25,
+	IN_59 => U335_C_26,
+	IN_60 => U335_C_27,
+	IN_61 => U335_C_28,
+	IN_62 => U335_C_29,
+	IN_63 => U335_C_30,
+	IN_64 => U335_C_31,
+	IN_65 => U334_C_0,
+	IN_66 => U334_C_1,
+	IN_67 => U334_C_2,
+	IN_68 => U334_C_3,
+	IN_69 => U334_C_4,
+	IN_70 => U334_C_5,
+	IN_71 => U334_C_6,
+	IN_72 => U334_C_7,
+	IN_73 => U334_C_8,
+	IN_74 => U334_C_9,
+	IN_75 => U334_C_10,
+	IN_76 => U334_C_11,
+	IN_77 => U334_C_12,
+	IN_78 => U334_C_13,
+	IN_79 => U334_C_14,
+	IN_80 => U334_C_15,
+	IN_81 => U334_C_16,
+	IN_82 => U334_C_17,
+	IN_83 => U334_C_18,
+	IN_84 => U334_C_19,
+	IN_85 => U334_C_20,
+	IN_86 => U334_C_21,
+	IN_87 => U334_C_22,
+	IN_88 => U334_C_23,
+	IN_89 => U334_C_24,
+	IN_90 => U334_C_25,
+	IN_91 => U334_C_26,
+	IN_92 => U334_C_27,
+	IN_93 => U334_C_28,
+	IN_94 => U334_C_29,
+	IN_95 => U334_C_30,
+	IN_96 => U334_C_31,
+	IN_97 => U336_C_0,
+	IN_98 => U336_C_1,
+	IN_99 => U336_C_2,
+	IN_100 => U336_C_3,
+	IN_101 => U336_C_4,
+	IN_102 => U336_C_5,
+	IN_103 => U336_C_6,
+	IN_104 => U336_C_7,
+	IN_105 => U336_C_8,
+	IN_106 => U336_C_9,
+	IN_107 => U336_C_10,
+	IN_108 => U336_C_11,
+	IN_109 => U336_C_12,
+	IN_110 => U336_C_13,
+	IN_111 => U336_C_14,
+	IN_112 => U336_C_15,
+	IN_113 => U336_C_16,
+	IN_114 => U336_C_17,
+	IN_115 => U336_C_18,
+	IN_116 => U336_C_19,
+	IN_117 => U336_C_20,
+	IN_118 => U336_C_21,
+	IN_119 => U336_C_22,
+	IN_120 => U336_C_23,
+	IN_121 => U336_C_24,
+	IN_122 => U336_C_25,
+	IN_123 => U336_C_26,
+	IN_124 => U336_C_27,
+	IN_125 => U336_C_28,
+	IN_126 => U336_C_29,
+	IN_127 => U336_C_30,
+	IN_128 => U336_C_31,
+	IN_129 => U476_A_TS,
+	IN_130 => U491_FT_CNT_EXT,
+	IN_131 => U492_FT_CNT_WIN,
+	TRIG => U475_OUT,
+	CLK_WRITE => CLK_ACQ,
+	SYNC_TRIG => "0",
+	SYNC_RESET => "0",
+	SYNC_CLK => "0",
+	BUSY => open,
+	FIFO_FULL => open,
+	RESET => "0",
+	CLK_READ => BUS_CLK,
+	READ_DATA => BUS_CP_0_READ_DATA,
+	READ_DATAVALID => BUS_CP_0_VLD,
+	READ_RD_INT => BUS_CP_0_R_INT,
+	READ_STATUS => REG_CP_0_READ_STATUS_RD,
+	READ_VALID_WORDS => REG_CP_0_READ_VALID_WORDS_RD,
+	CONFIG => REG_CP_0_CONFIG_WR );
 
 		 
 end Behavioral;

@@ -2,43 +2,1946 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Fri Dec 13 16:23:12 2019
-# Process ID: 1160
-# Current directory: C:/OpenHardware/UserProject/NEWCitirocDesignforDT0WReadoutsoftware/HDL
-# Command line: vivado.exe -mode batch -source C:/OpenHardware/UserProject/NEWCitirocDesignforDT0WReadoutsoftware/HDL/NEWCitirocDesignforDT0WReadoutsoftware_program.tcl
-# Log file: C:/OpenHardware/UserProject/NEWCitirocDesignforDT0WReadoutsoftware/HDL/vivado.log
-# Journal file: C:/OpenHardware/UserProject/NEWCitirocDesignforDT0WReadoutsoftware/HDL\vivado.jou
+# Start of session at: Tue Feb 18 21:11:15 2020
+# Process ID: 24984
+# Current directory: E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL
+# Command line: vivado.exe -mode batch -source E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/NEWCitirocDesignforDT0WReadoutsoftware.tcl
+# Log file: E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/vivado.log
+# Journal file: E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL\vivado.jou
 #-----------------------------------------------------------
-source C:/OpenHardware/UserProject/NEWCitirocDesignforDT0WReadoutsoftware/HDL/NEWCitirocDesignforDT0WReadoutsoftware_program.tcl
-# open_hw
-# connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-
-****** Xilinx hw_server v2017.4
-  **** Build date : Dec 15 2017-21:08:27
-    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
-
-
-# foreach tgrt [get_hw_targets] {
-# open_hw_target $tgrt
-# if {[get_hw_devices xc7k160t_0*]  !="" } {
-# set_property PROBES.FILE {} [lindex [get_hw_devices xc7k160t_0*] 0]
-# set_property PROGRAM.FILE {C:/OpenHardware/UserProject/NEWCitirocDesignforDT0WReadoutsoftware/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.runs/impl_1/TOP_NEWCitirocDesignforDT0WReadoutsoftware.bit} [lindex [get_hw_devices xc7k160t_0*] 0]
-# program_hw_devices [lindex [get_hw_devices xc7k160t_0*] 0]
-# refresh_hw_device [lindex [get_hw_devices xc7k160t_0*] 0]
+source E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/NEWCitirocDesignforDT0WReadoutsoftware.tcl
+# set outputDir E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware
+# file mkdir $outputDir
+# create_project NEWCitirocDesignforDT0WReadoutsoftware E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware -part XC7K160TFFG676-2 -force
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware'
+# set_property target_language VHDL [current_project]
+# set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY XPM_FIFO} [current_project]
+# add_files -force pcores/clk_wiz_0.xcix
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'c:/Xilinx/Vivado/2017.4/data/ip'.
+# add_files -force pcores/clk_wiz_0.xcix
+CRITICAL WARNING: [Vivado 12-1462] The source file is already part of the fileset 'sources_1'. Requested source 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/clk_wiz_0.xcix' will not be added.
+# add_files -force pcores/DTClockGenerator.xci
+WARNING: [IP_Flow 19-2162] IP 'DTClockGenerator' is locked:
+* IP 'DTClockGenerator' shares a common output directory with other IP. It is recommended that each IP be placed in its own directory.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+# add_files -force pcores/fast_clock.xci
+WARNING: [IP_Flow 19-2162] IP 'fast_clock' is locked:
+* IP 'fast_clock' shares a common output directory with other IP. It is recommended that each IP be placed in its own directory.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+# add_files -force pcores/fifo_generator_0.xcix
+# add_files -force pcores/fifo_generator_0.xcix
+CRITICAL WARNING: [Vivado 12-1462] The source file is already part of the fileset 'sources_1'. Requested source 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/fifo_generator_0.xcix' will not be added.
+# add_files -force pcores/FlashPageMemory.xci
+INFO: [Device 21-403] Loading part xc7k160tffg676-2
+WARNING: [IP_Flow 19-2162] IP 'FlashPageMemory' is locked:
+* IP 'FlashPageMemory' shares a common output directory with other IP. It is recommended that each IP be placed in its own directory.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 557.336 ; gain = 115.133
+# add_files -force pcores/FTDI_FIFOs.xci
+WARNING: [IP_Flow 19-2162] IP 'FTDI_FIFOs' is locked:
+* IP 'FTDI_FIFOs' shares a common output directory with other IP. It is recommended that each IP be placed in its own directory.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+# add_files -force pcores/FTDI_FIFO_AW.xci
+WARNING: [IP_Flow 19-2162] IP 'FTDI_FIFO_AW' is locked:
+* IP 'FTDI_FIFO_AW' shares a common output directory with other IP. It is recommended that each IP be placed in its own directory.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+# add_files -force pcores/TestBram.xci
+WARNING: [IP_Flow 19-2162] IP 'TestBram' is locked:
+* IP 'TestBram' shares a common output directory with other IP. It is recommended that each IP be placed in its own directory.
+Please select 'Report IP Status' from the 'Tools/Report' menu or run Tcl command 'report_ip_status' for more information.
+# add_files -force E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/subpage_frameproc.vhd
+# add_files -force E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/subpage_Framing.vhd
+# add_files -force E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/subpage_Timer64.vhd
+# add_files -force E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/subpage_TriggerLogic.vhd
+# add_files -force E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/top_NEWCitirocDesignforDT0WReadoutsoftware.vhd
+# add_files -force pcores/ADC1.v
+# add_files -force pcores/adcs_top.vhd
+# add_files -force pcores/adcs_top.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/adcs_top.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/ADC_FRAME_S.vhd
+# add_files -force pcores/ADC_FRAME_S.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/ADC_FRAME_S.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/adc_interface.vhd
+# add_files -force pcores/adc_interface.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/adc_interface.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/adc_sync.vhd
+# add_files -force pcores/adc_sync.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/adc_sync.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/chronoenable.vhd
+# add_files -force pcores/chronoenable.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/chronoenable.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/CitirocAnalogReadout.vhd
+# add_files -force pcores/CitirocAnalogReadout.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/CitirocAnalogReadout.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/CitirocFrameTransfer.vhd
+# add_files -force pcores/CitirocFrameTransfer.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/CitirocFrameTransfer.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/CitirocSlowControl.vhd
+# add_files -force pcores/CitirocSlowControl.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/CitirocSlowControl.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/comparator.vhd
+# add_files -force pcores/comparator.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/comparator.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/counter_rising.vhd
+# add_files -force pcores/counter_rising.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/counter_rising.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/d_latch.vhd
+# add_files -force pcores/d_latch.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/d_latch.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/edge_pos.vhd
+# add_files -force pcores/edge_pos.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/edge_pos.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/FlashController.vhd
+# add_files -force pcores/FlashController.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/FlashController.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/flash_prog.vhd
+# add_files -force pcores/flash_prog.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/flash_prog.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/frequency_meter.vhd
+# add_files -force pcores/frequency_meter.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/frequency_meter.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/ft600_fifo245_core.vhd
+# add_files -force pcores/ft600_fifo245_core.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/ft600_fifo245_core.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/ft600_fifo245_wrapper.vhd
+# add_files -force pcores/ft600_fifo245_wrapper.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/ft600_fifo245_wrapper.vhd' cannot be added to the project because it already exists in the project, skipping this file
+CRITICAL WARNING: [Vivado 12-3645] Please note that adding or importing multiple files, one at a time, can be performance intensive.  Both add_files and import_files commands accept multiple files as input, and passing a collection of multiple files to a single add_files or import_files commands can offer significant performance improvement.
+# add_files -force pcores/i2cmaster.vhd
+# add_files -force pcores/i2cmaster.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/i2cmaster.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/init_clock_gen.vhd
+# add_files -force pcores/init_clock_gen.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/init_clock_gen.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/MCRateMeter.vhd
+# add_files -force pcores/MCRateMeter.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/MCRateMeter.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/PULSE_GENERATOR.vhd
+# add_files -force pcores/PULSE_GENERATOR.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/PULSE_GENERATOR.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/security.vhd
+# add_files -force pcores/security.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/security.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/spi32bit_master_write.vhd
+# add_files -force pcores/spi32bit_master_write.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/spi32bit_master_write.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/spi93lc56_16bit.vhd
+# add_files -force pcores/spi93lc56_16bit.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/spi93lc56_16bit.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/spi_timing_module.vhd
+# add_files -force pcores/spi_timing_module.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/spi_timing_module.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/TimestampGenerator.vhd
+# add_files -force pcores/TimestampGenerator.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/TimestampGenerator.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/U503_custompacket.vhd
+# add_files -force pcores/U503_custompacket.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/U503_custompacket.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/xlx_oscilloscope_sync.vhd
+# add_files -force pcores/xlx_oscilloscope_sync.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/xlx_oscilloscope_sync.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force pcores/xlx_soft_gd.vhd
+# add_files -force pcores/xlx_soft_gd.vhd
+WARNING: [filemgmt 56-12] File 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/pcores/xlx_soft_gd.vhd' cannot be added to the project because it already exists in the project, skipping this file
+# add_files -force -fileset constrs_1 E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/dt555w_constraints.xdc
+# import_files -force -norecurse
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+# import_files -fileset constrs_1 -force -norecurse E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/dt555w_constraints.xdc
+# foreach ip [get_ips] {
+# upgrade_ip [get_ips $ip]
+# set ip_filename [get_property IP_FILE $ip]
+# set ip_dcp [file rootname $ip_filename]
+# append ip_dcp ".dcp"
+# set ip_xml [file rootname $ip_filename]
+# append ip_xml ".xml"
+# if {([file exists $ip_dcp] == 0) || [expr {[file mtime $ip_filename ] > [file mtime $ip_dcp ]}]} {
+# reset_target all $ip
+# file delete $ip_xml
+# generate_target all $ip
+# synth_ip $ip
 # }
-# close_hw_target
 # }
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210308A64E12
-INFO: [Labtools 27-3164] End of startup status: HIGH
-INFO: [Labtools 27-1434] Device xc7k160t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Labtools 27-3361] The debug hub core was not detected.
-Resolution: 
-1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
-2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
-For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
-INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Digilent/210308A64E12
-# exit
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 13 16:23:21 2019...
+WARNING: [Coretcl 2-1042] No IP was identified for upgrade.
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'DTClockGenerator'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'DTClockGenerator'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'DTClockGenerator'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'DTClockGenerator'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'DTClockGenerator'...
+CRITICAL WARNING: [Vivado 12-5447] synth_ip is not supported in project mode, please use non-project mode.
+create_project -in_memory generateNetlistIP -part xc7k160tffg676-2
+read_ip E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator.xci
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'c:/Xilinx/Vivado/2017.4/data/ip'.
+Command: synth_design -top DTClockGenerator -part xc7k160tffg676-2 -mode out_of_context
+Starting synth_design
+WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator.xci
+
+WARNING: [Vivado_Tcl 4-393] The 'Implementation' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator.xci
+
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 19708 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 672.281 ; gain = 101.625
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'DTClockGenerator' [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator.v:74]
+INFO: [Synth 8-638] synthesizing module 'DTClockGenerator_clk_wiz' [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator_clk_wiz.v:72]
+INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [c:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:25757]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 5.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 6.250000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 2.500000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT1_DIVIDE bound to: 5 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT2_DIVIDE bound to: 10 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT3_DIVIDE bound to: 20 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter CLKOUT4_DIVIDE bound to: 32 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-256] done synthesizing module 'MMCME2_ADV' (1#1) [c:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:25757]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [c:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (2#1) [c:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:607]
+INFO: [Synth 8-256] done synthesizing module 'DTClockGenerator_clk_wiz' (3#1) [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator_clk_wiz.v:72]
+INFO: [Synth 8-256] done synthesizing module 'DTClockGenerator' (4#1) [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator.v:74]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 724.059 ; gain = 153.402
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 724.059 ; gain = 153.402
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator_ooc.xdc] for cell 'inst'
+Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator_board.xdc] for cell 'inst'
+Finished Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator_board.xdc] for cell 'inst'
+Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator.xdc] for cell 'inst'
+Finished Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator.xdc] for cell 'inst'
+Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator_late.xdc] for cell 'inst'
+Finished Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator_late.xdc] for cell 'inst'
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Timing 38-2] Deriving generated clocks
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 786.660 ; gain = 1.133
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 786.660 ; gain = 216.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tffg676-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 786.660 ; gain = 216.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 786.660 ; gain = 216.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 786.660 ; gain = 216.004
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 786.660 ; gain = 216.004
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 834.758 ; gain = 264.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 834.758 ; gain = 264.102
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 844.285 ; gain = 273.629
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 844.285 ; gain = 273.629
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 844.285 ; gain = 273.629
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 844.285 ; gain = 273.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 844.285 ; gain = 273.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 844.285 ; gain = 273.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 844.285 ; gain = 273.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     6|
+|2     |MMCME2_ADV |     1|
++------+-----------+------+
+
+Report Instance Areas: 
++------+---------+-------------------------+------+
+|      |Instance |Module                   |Cells |
++------+---------+-------------------------+------+
+|1     |top      |                         |     7|
+|2     |  inst   |DTClockGenerator_clk_wiz |     7|
++------+---------+-------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 844.285 ; gain = 273.629
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 844.285 ; gain = 211.027
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 844.285 ; gain = 273.629
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator_ooc.xdc] for cell 'inst'
+Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator_board.xdc] for cell 'inst'
+Finished Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator_board.xdc] for cell 'inst'
+Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator.xdc] for cell 'inst'
+Finished Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator.xdc] for cell 'inst'
+Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator_late.xdc] for cell 'inst'
+Finished Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator_late.xdc] for cell 'inst'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+22 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 874.609 ; gain = 308.680
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+INFO: [Common 17-1381] The checkpoint 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/DTClockGenerator/DTClockGenerator.dcp' has been generated.
+INFO: [Vivado 12-3441] generate_netlist_ip - operation complete
+synth_ip: Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1230.734 ; gain = 664.805
+WARNING: [Coretcl 2-1042] No IP was identified for upgrade.
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'FTDI_FIFO_AW'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FTDI_FIFO_AW'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FTDI_FIFO_AW'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'FTDI_FIFO_AW'...
+CRITICAL WARNING: [Vivado 12-5447] synth_ip is not supported in project mode, please use non-project mode.
+create_project -in_memory generateNetlistIP -part xc7k160tffg676-2
+read_ip E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFO_AW/FTDI_FIFO_AW.xci
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'c:/Xilinx/Vivado/2017.4/data/ip'.
+Command: synth_design -top FTDI_FIFO_AW -part xc7k160tffg676-2 -mode out_of_context
+Starting synth_design
+WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFO_AW/FTDI_FIFO_AW.xci
+
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 23732 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1230.734 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'FTDI_FIFO_AW' [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFO_AW/synth/FTDI_FIFO_AW.vhd:76]
+	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
+	Parameter C_SELECT_XPM bound to: 0 - type: integer 
+	Parameter C_COUNT_TYPE bound to: 0 - type: integer 
+	Parameter C_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter C_DEFAULT_VALUE bound to: BlankString - type: string 
+	Parameter C_DIN_WIDTH bound to: 66 - type: integer 
+	Parameter C_DOUT_RST_VAL bound to: 0 - type: string 
+	Parameter C_DOUT_WIDTH bound to: 66 - type: integer 
+	Parameter C_ENABLE_RLOCS bound to: 0 - type: integer 
+	Parameter C_FAMILY bound to: kintex7 - type: string 
+	Parameter C_FULL_FLAGS_RST_VAL bound to: 1 - type: integer 
+	Parameter C_HAS_ALMOST_EMPTY bound to: 0 - type: integer 
+	Parameter C_HAS_ALMOST_FULL bound to: 0 - type: integer 
+	Parameter C_HAS_BACKUP bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_INT_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_MEMINIT_FILE bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_RD_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_RD_RST bound to: 0 - type: integer 
+	Parameter C_HAS_RST bound to: 1 - type: integer 
+	Parameter C_HAS_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_VALID bound to: 1 - type: integer 
+	Parameter C_HAS_WR_ACK bound to: 0 - type: integer 
+	Parameter C_HAS_WR_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_WR_RST bound to: 0 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE bound to: 2 - type: integer 
+	Parameter C_INIT_WR_PNTR_VAL bound to: 0 - type: integer 
+	Parameter C_MEMORY_TYPE bound to: 1 - type: integer 
+	Parameter C_MIF_FILE_NAME bound to: BlankString - type: string 
+	Parameter C_OPTIMIZATION_MODE bound to: 0 - type: integer 
+	Parameter C_OVERFLOW_LOW bound to: 0 - type: integer 
+	Parameter C_PRELOAD_LATENCY bound to: 1 - type: integer 
+	Parameter C_PRELOAD_REGS bound to: 0 - type: integer 
+	Parameter C_PRIM_FIFO_TYPE bound to: 512x72 - type: string 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL bound to: 4 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_NEGATE_VAL bound to: 5 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE bound to: 1 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL bound to: 25 - type: integer 
+	Parameter C_PROG_FULL_THRESH_NEGATE_VAL bound to: 24 - type: integer 
+	Parameter C_PROG_FULL_TYPE bound to: 1 - type: integer 
+	Parameter C_RD_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter C_RD_DEPTH bound to: 64 - type: integer 
+	Parameter C_RD_FREQ bound to: 1 - type: integer 
+	Parameter C_RD_PNTR_WIDTH bound to: 6 - type: integer 
+	Parameter C_UNDERFLOW_LOW bound to: 0 - type: integer 
+	Parameter C_USE_DOUT_RST bound to: 1 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_USE_EMBEDDED_REG bound to: 0 - type: integer 
+	Parameter C_USE_PIPELINE_REG bound to: 0 - type: integer 
+	Parameter C_POWER_SAVING_MODE bound to: 0 - type: integer 
+	Parameter C_USE_FIFO16_FLAGS bound to: 0 - type: integer 
+	Parameter C_USE_FWFT_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_VALID_LOW bound to: 1 - type: integer 
+	Parameter C_WR_ACK_LOW bound to: 0 - type: integer 
+	Parameter C_WR_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter C_WR_DEPTH bound to: 64 - type: integer 
+	Parameter C_WR_FREQ bound to: 1 - type: integer 
+	Parameter C_WR_PNTR_WIDTH bound to: 6 - type: integer 
+	Parameter C_WR_RESPONSE_LATENCY bound to: 1 - type: integer 
+	Parameter C_MSGON_VAL bound to: 1 - type: integer 
+	Parameter C_ENABLE_RST_SYNC bound to: 1 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE bound to: 0 - type: integer 
+	Parameter C_SYNCHRONIZER_STAGE bound to: 2 - type: integer 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_WR_CHANNEL bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_RD_CHANNEL bound to: 1 - type: integer 
+	Parameter C_HAS_SLAVE_CE bound to: 0 - type: integer 
+	Parameter C_HAS_MASTER_CE bound to: 0 - type: integer 
+	Parameter C_ADD_NGC_CONSTRAINT bound to: 0 - type: integer 
+	Parameter C_USE_COMMON_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_USE_COMMON_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_USE_DEFAULT_SETTINGS bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXI_LEN_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXI_LOCK_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_AWUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_WUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_BUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_ARUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_RUSER bound to: 0 - type: integer 
+	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TDATA bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TID bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TDEST bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TUSER bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TREADY bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TSTRB bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TKEEP bound to: 0 - type: integer 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXIS_TSTRB_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TKEEP_WIDTH bound to: 1 - type: integer 
+	Parameter C_WACH_TYPE bound to: 0 - type: integer 
+	Parameter C_WDCH_TYPE bound to: 0 - type: integer 
+	Parameter C_WRCH_TYPE bound to: 0 - type: integer 
+	Parameter C_RACH_TYPE bound to: 0 - type: integer 
+	Parameter C_RDCH_TYPE bound to: 0 - type: integer 
+	Parameter C_AXIS_TYPE bound to: 0 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WACH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WDCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WRCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_RACH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_RDCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_AXIS bound to: 1 - type: integer 
+	Parameter C_APPLICATION_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PRIM_FIFO_TYPE_WACH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_WDCH bound to: 1kx36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_WRCH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_RACH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_RDCH bound to: 1kx36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_AXIS bound to: 1kx18 - type: string 
+	Parameter C_USE_ECC_WACH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_WDCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_WRCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_RACH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_RDCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_AXIS bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_DIN_WIDTH_WACH bound to: 1 - type: integer 
+	Parameter C_DIN_WIDTH_WDCH bound to: 64 - type: integer 
+	Parameter C_DIN_WIDTH_WRCH bound to: 2 - type: integer 
+	Parameter C_DIN_WIDTH_RACH bound to: 32 - type: integer 
+	Parameter C_DIN_WIDTH_RDCH bound to: 64 - type: integer 
+	Parameter C_DIN_WIDTH_AXIS bound to: 1 - type: integer 
+	Parameter C_WR_DEPTH_WACH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_WDCH bound to: 1024 - type: integer 
+	Parameter C_WR_DEPTH_WRCH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_RACH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_RDCH bound to: 1024 - type: integer 
+	Parameter C_WR_DEPTH_AXIS bound to: 1024 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WRCH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_AXIS bound to: 10 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WACH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WDCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WRCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_RACH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_RDCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_AXIS bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WACH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WDCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WRCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_RACH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_RDCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WACH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WDCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WRCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_RACH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_RDCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_AXIS bound to: 1023 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS bound to: 1022 - type: integer 
+	Parameter C_REG_SLICE_MODE_WACH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_WDCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_WRCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_RACH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_RDCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_AXIS bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'fifo_generator_v13_2_1' declared at 'e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFO_AW/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd:38483' bound to instance 'U0' of component 'fifo_generator_v13_2_1' [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFO_AW/synth/FTDI_FIFO_AW.vhd:546]
+INFO: [Synth 8-638] synthesizing module 'xpm_cdc_async_rst' [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1177]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1228]
+INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_async_rst' (1#1) [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1177]
+INFO: [Synth 8-638] synthesizing module 'xpm_cdc_single' [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:205]
+INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_single' (2#1) [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-638] synthesizing module 'xpm_cdc_gray' [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:300]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:390]
+INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_gray' (14#1) [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:300]
+INFO: [Synth 8-256] done synthesizing module 'FTDI_FIFO_AW' (31#1) [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFO_AW/synth/FTDI_FIFO_AW.vhd:76]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH[5]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH[4]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH[3]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH[2]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH[1]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH[0]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_ASSERT[5]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_ASSERT[4]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_ASSERT[3]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_ASSERT[2]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_ASSERT[1]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_ASSERT[0]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_NEGATE[5]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_NEGATE[4]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_NEGATE[3]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_NEGATE[2]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_NEGATE[1]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_NEGATE[0]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port SRST
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_RST
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port SRST
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port SAFETY_CKT_WR_RST
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[5]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[4]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[3]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[2]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[1]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[0]
+WARNING: [Synth 8-3331] design wr_bin_cntr has unconnected port SRST
+WARNING: [Synth 8-3331] design wr_logic has unconnected port WR_EN_INTO_LOGIC
+WARNING: [Synth 8-3331] design wr_logic has unconnected port WR_RST_INTO_LOGIC
+WARNING: [Synth 8-3331] design wr_logic has unconnected port RD_EN
+WARNING: [Synth 8-3331] design wr_logic has unconnected port SRST_FULL_FF
+WARNING: [Synth 8-3331] design wr_logic has unconnected port WR_RST_BUSY
+WARNING: [Synth 8-3331] design wr_logic has unconnected port EMPTY
+WARNING: [Synth 8-3331] design wr_logic has unconnected port RAM_RD_EN
+WARNING: [Synth 8-3331] design wr_logic has unconnected port ALMOST_EMPTY
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH[5]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH[4]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH[3]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH[2]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH[1]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH[0]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_ASSERT[5]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_ASSERT[4]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_ASSERT[3]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_ASSERT[2]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_ASSERT[1]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_ASSERT[0]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_NEGATE[5]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_NEGATE[4]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_NEGATE[3]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_NEGATE[2]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_NEGATE[1]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_NEGATE[0]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port SRST
+WARNING: [Synth 8-3331] design rd_handshaking_flags has unconnected port SRST
+WARNING: [Synth 8-3331] design rd_handshaking_flags has unconnected port RD_RST_BUSY
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port SRST
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port SAFETY_CKT_RD_RST
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[5]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[4]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[3]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[2]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[1]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[0]
+WARNING: [Synth 8-3331] design rd_bin_cntr has unconnected port SRST
+WARNING: [Synth 8-3331] design rd_logic has unconnected port RD_EN_INTO_LOGIC
+WARNING: [Synth 8-3331] design rd_logic has unconnected port RD_RST_INTO_LOGIC
+WARNING: [Synth 8-3331] design rd_logic has unconnected port RAM_WR_EN
+WARNING: [Synth 8-3331] design rd_logic has unconnected port RST_FULL_FF
+WARNING: [Synth 8-3331] design rd_logic has unconnected port ALMOST_FULL_FB
+WARNING: [Synth 8-3331] design rd_logic has unconnected port FULL
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[5]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[4]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[3]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[2]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[1]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[0]
+WARNING: [Synth 8-3331] design clk_x_pntrs has unconnected port WR_RST
+WARNING: [Synth 8-3331] design clk_x_pntrs has unconnected port RD_RST
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port SSRA
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port REGCEA
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port SSRB
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port WEB[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[71]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[70]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[69]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[68]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[67]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[66]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[65]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[64]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[63]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[62]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[61]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[60]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[59]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[58]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[57]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:01:15 ; elapsed = 00:01:17 . Memory (MB): peak = 1470.535 ; gain = 239.801
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:15 ; elapsed = 00:01:17 . Memory (MB): peak = 1470.535 ; gain = 239.801
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFO_AW/FTDI_FIFO_AW_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFO_AW/FTDI_FIFO_AW_ooc.xdc] for cell 'U0'
+Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFO_AW/FTDI_FIFO_AW.xdc] for cell 'U0'
+Finished Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFO_AW/FTDI_FIFO_AW.xdc] for cell 'U0'
+Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFO_AW/FTDI_FIFO_AW_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFO_AW/FTDI_FIFO_AW_clocks.xdc] for cell 'U0'
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/FTDI_FIFO_AW_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/FTDI_FIFO_AW_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/FTDI_FIFO_AW_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/FTDI_FIFO_AW_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/FTDI_FIFO_AW_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/FTDI_FIFO_AW_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1470.535 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:21 ; elapsed = 00:01:23 . Memory (MB): peak = 1470.535 ; gain = 239.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tffg676-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:21 ; elapsed = 00:01:23 . Memory (MB): peak = 1470.535 ; gain = 239.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /\gntv_or_sync_fifo.gcx.clkx /rd_pntr_cdc_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /\gntv_or_sync_fifo.gcx.clkx /wr_pntr_cdc_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:21 ; elapsed = 00:01:24 . Memory (MB): peak = 1470.535 ; gain = 239.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:22 ; elapsed = 00:01:24 . Memory (MB): peak = 1470.535 ; gain = 239.801
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 2     
++---XORs : 
+	   2 Input      6 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 34    
++---Registers : 
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 13    
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 13    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module xpm_cdc_async_rst 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module xpm_cdc_single 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module reset_blk_ramfifo 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
+Module xpm_cdc_gray 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      6 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 5     
++---Registers : 
+	                6 Bit    Registers := 4     
+Module rd_bin_cntr 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 2     
+Module compare 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 6     
+Module rd_status_flags_as 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module rd_handshaking_flags 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module rd_pe_as 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module wr_bin_cntr 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 3     
+Module wr_status_flags_as 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module wr_pf_as 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.gpf.wrpf/gdiff.diff_pntr_pad_reg[0]) is unused and will be removed from module fifo_generator_v13_2_1.
+WARNING: [Synth 8-3332] Sequential element (inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.gpe.rdpe/gdiff.diff_pntr_pad_reg[0]) is unused and will be removed from module fifo_generator_v13_2_1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:01:25 . Memory (MB): peak = 1470.535 ; gain = 239.801
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:23 ; elapsed = 00:01:26 . Memory (MB): peak = 1470.535 ; gain = 239.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:01:26 . Memory (MB): peak = 1470.535 ; gain = 239.801
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:24 ; elapsed = 00:01:26 . Memory (MB): peak = 1470.535 ; gain = 239.801
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:24 ; elapsed = 00:01:27 . Memory (MB): peak = 1470.535 ; gain = 239.801
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:24 ; elapsed = 00:01:27 . Memory (MB): peak = 1470.535 ; gain = 239.801
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:24 ; elapsed = 00:01:27 . Memory (MB): peak = 1470.535 ; gain = 239.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:24 ; elapsed = 00:01:27 . Memory (MB): peak = 1470.535 ; gain = 239.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:24 ; elapsed = 00:01:27 . Memory (MB): peak = 1470.535 ; gain = 239.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:24 ; elapsed = 00:01:27 . Memory (MB): peak = 1470.535 ; gain = 239.801
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |     4|
+|2     |LUT1     |     2|
+|3     |LUT2     |    32|
+|4     |LUT3     |     7|
+|5     |LUT4     |    11|
+|6     |LUT5     |     7|
+|7     |LUT6     |    11|
+|8     |RAMB36E1 |     1|
+|9     |FDCE     |    45|
+|10    |FDPE     |    20|
+|11    |FDRE     |    56|
++------+---------+------+
+
+Report Instance Areas: 
++------+-------------------------------------------------------------------------------------+-----------------------------+------+
+|      |Instance                                                                             |Module                       |Cells |
++------+-------------------------------------------------------------------------------------+-----------------------------+------+
+|1     |top                                                                                  |                             |   196|
+|2     |  U0                                                                                 |fifo_generator_v13_2_1       |   196|
+|3     |    inst_fifo_gen                                                                    |fifo_generator_v13_2_1_synth |   196|
+|4     |      \gconvfifo.rf                                                                  |fifo_generator_top           |   196|
+|5     |        \grf.rf                                                                      |fifo_generator_ramfifo       |   196|
+|6     |          \gntv_or_sync_fifo.gcx.clkx                                                |clk_x_pntrs                  |    77|
+|7     |            wr_pntr_cdc_inst                                                         |xpm_cdc_gray__1              |    34|
+|8     |            rd_pntr_cdc_inst                                                         |xpm_cdc_gray                 |    34|
+|9     |          \gntv_or_sync_fifo.gl0.rd                                                  |rd_logic                     |    38|
+|10    |            \gras.gpe.rdpe                                                           |rd_pe_as                     |    11|
+|11    |            \gras.rsts                                                               |rd_status_flags_as           |     5|
+|12    |            \grhf.rhf                                                                |rd_handshaking_flags         |     1|
+|13    |            rpntr                                                                    |rd_bin_cntr                  |    21|
+|14    |          \gntv_or_sync_fifo.gl0.wr                                                  |wr_logic                     |    51|
+|15    |            \gwas.gpf.wrpf                                                           |wr_pf_as                     |    11|
+|16    |            \gwas.wsts                                                               |wr_status_flags_as           |     3|
+|17    |            wpntr                                                                    |wr_bin_cntr                  |    37|
+|18    |          \gntv_or_sync_fifo.mem                                                     |memory                       |     1|
+|19    |            \gbm.gbmg.gbmga.ngecc.bmg                                                |blk_mem_gen_v8_4_1           |     1|
+|20    |              inst_blk_mem_gen                                                       |blk_mem_gen_v8_4_1_synth     |     1|
+|21    |                \gnbram.gnativebmg.native_blk_mem_gen                                |blk_mem_gen_top              |     1|
+|22    |                  \valid.cstr                                                        |blk_mem_gen_generic_cstr     |     1|
+|23    |                    \ramloop[0].ram.r                                                |blk_mem_gen_prim_width       |     1|
+|24    |                      \prim_noinit.ram                                               |blk_mem_gen_prim_wrapper     |     1|
+|25    |          rstblk                                                                     |reset_blk_ramfifo            |    29|
+|26    |            \ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst                     |xpm_cdc_async_rst__1         |     2|
+|27    |            \ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst             |xpm_cdc_async_rst            |     2|
+|28    |            \ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd  |xpm_cdc_single__1            |     4|
+|29    |            \ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr  |xpm_cdc_single               |     4|
++------+-------------------------------------------------------------------------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:24 ; elapsed = 00:01:27 . Memory (MB): peak = 1470.535 ; gain = 239.801
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 453 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:01:25 . Memory (MB): peak = 1470.535 ; gain = 239.801
+Synthesis Optimization Complete : Time (s): cpu = 00:01:24 ; elapsed = 00:01:27 . Memory (MB): peak = 1470.535 ; gain = 239.801
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFO_AW/FTDI_FIFO_AW_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFO_AW/FTDI_FIFO_AW_ooc.xdc] for cell 'U0'
+Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFO_AW/FTDI_FIFO_AW.xdc] for cell 'U0'
+Finished Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFO_AW/FTDI_FIFO_AW.xdc] for cell 'U0'
+Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFO_AW/FTDI_FIFO_AW_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFO_AW/FTDI_FIFO_AW_clocks.xdc] for cell 'U0'
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl:2]
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:26 ; elapsed = 00:01:28 . Memory (MB): peak = 1490.984 ; gain = 260.250
+INFO: [Coretcl 2-1174] Renamed 28 cell refs.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint 'E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFO_AW/FTDI_FIFO_AW.dcp' has been generated.
+INFO: [Vivado 12-3441] generate_netlist_ip - operation complete
+synth_ip: Time (s): cpu = 00:01:27 ; elapsed = 00:01:30 . Memory (MB): peak = 1490.984 ; gain = 260.250
+WARNING: [Coretcl 2-1042] No IP was identified for upgrade.
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'FTDI_FIFOs'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'FTDI_FIFOs'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'FTDI_FIFOs'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'FTDI_FIFOs'...
+CRITICAL WARNING: [Vivado 12-5447] synth_ip is not supported in project mode, please use non-project mode.
+create_project -in_memory generateNetlistIP -part xc7k160tffg676-2
+read_ip E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFOs/FTDI_FIFOs.xci
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'c:/Xilinx/Vivado/2017.4/data/ip'.
+Command: synth_design -top FTDI_FIFOs -part xc7k160tffg676-2 -mode out_of_context
+Starting synth_design
+WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFOs/FTDI_FIFOs.xci
+
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k160t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7492 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1490.984 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'FTDI_FIFOs' [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFOs/synth/FTDI_FIFOs.vhd:76]
+	Parameter C_COMMON_CLOCK bound to: 0 - type: integer 
+	Parameter C_SELECT_XPM bound to: 0 - type: integer 
+	Parameter C_COUNT_TYPE bound to: 0 - type: integer 
+	Parameter C_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter C_DEFAULT_VALUE bound to: BlankString - type: string 
+	Parameter C_DIN_WIDTH bound to: 34 - type: integer 
+	Parameter C_DOUT_RST_VAL bound to: 0 - type: string 
+	Parameter C_DOUT_WIDTH bound to: 34 - type: integer 
+	Parameter C_ENABLE_RLOCS bound to: 0 - type: integer 
+	Parameter C_FAMILY bound to: kintex7 - type: string 
+	Parameter C_FULL_FLAGS_RST_VAL bound to: 1 - type: integer 
+	Parameter C_HAS_ALMOST_EMPTY bound to: 0 - type: integer 
+	Parameter C_HAS_ALMOST_FULL bound to: 0 - type: integer 
+	Parameter C_HAS_BACKUP bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_INT_CLK bound to: 0 - type: integer 
+	Parameter C_HAS_MEMINIT_FILE bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_RD_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_RD_RST bound to: 0 - type: integer 
+	Parameter C_HAS_RST bound to: 1 - type: integer 
+	Parameter C_HAS_SRST bound to: 0 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_VALID bound to: 1 - type: integer 
+	Parameter C_HAS_WR_ACK bound to: 0 - type: integer 
+	Parameter C_HAS_WR_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_HAS_WR_RST bound to: 0 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE bound to: 2 - type: integer 
+	Parameter C_INIT_WR_PNTR_VAL bound to: 0 - type: integer 
+	Parameter C_MEMORY_TYPE bound to: 1 - type: integer 
+	Parameter C_MIF_FILE_NAME bound to: BlankString - type: string 
+	Parameter C_OPTIMIZATION_MODE bound to: 0 - type: integer 
+	Parameter C_OVERFLOW_LOW bound to: 0 - type: integer 
+	Parameter C_PRELOAD_LATENCY bound to: 1 - type: integer 
+	Parameter C_PRELOAD_REGS bound to: 0 - type: integer 
+	Parameter C_PRIM_FIFO_TYPE bound to: 512x36 - type: string 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL bound to: 4 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_NEGATE_VAL bound to: 5 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE bound to: 1 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL bound to: 25 - type: integer 
+	Parameter C_PROG_FULL_THRESH_NEGATE_VAL bound to: 24 - type: integer 
+	Parameter C_PROG_FULL_TYPE bound to: 1 - type: integer 
+	Parameter C_RD_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter C_RD_DEPTH bound to: 64 - type: integer 
+	Parameter C_RD_FREQ bound to: 1 - type: integer 
+	Parameter C_RD_PNTR_WIDTH bound to: 6 - type: integer 
+	Parameter C_UNDERFLOW_LOW bound to: 0 - type: integer 
+	Parameter C_USE_DOUT_RST bound to: 1 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_USE_EMBEDDED_REG bound to: 0 - type: integer 
+	Parameter C_USE_PIPELINE_REG bound to: 0 - type: integer 
+	Parameter C_POWER_SAVING_MODE bound to: 0 - type: integer 
+	Parameter C_USE_FIFO16_FLAGS bound to: 0 - type: integer 
+	Parameter C_USE_FWFT_DATA_COUNT bound to: 0 - type: integer 
+	Parameter C_VALID_LOW bound to: 1 - type: integer 
+	Parameter C_WR_ACK_LOW bound to: 0 - type: integer 
+	Parameter C_WR_DATA_COUNT_WIDTH bound to: 6 - type: integer 
+	Parameter C_WR_DEPTH bound to: 64 - type: integer 
+	Parameter C_WR_FREQ bound to: 1 - type: integer 
+	Parameter C_WR_PNTR_WIDTH bound to: 6 - type: integer 
+	Parameter C_WR_RESPONSE_LATENCY bound to: 1 - type: integer 
+	Parameter C_MSGON_VAL bound to: 1 - type: integer 
+	Parameter C_ENABLE_RST_SYNC bound to: 1 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE bound to: 0 - type: integer 
+	Parameter C_SYNCHRONIZER_STAGE bound to: 2 - type: integer 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_WR_CHANNEL bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_RD_CHANNEL bound to: 1 - type: integer 
+	Parameter C_HAS_SLAVE_CE bound to: 0 - type: integer 
+	Parameter C_HAS_MASTER_CE bound to: 0 - type: integer 
+	Parameter C_ADD_NGC_CONSTRAINT bound to: 0 - type: integer 
+	Parameter C_USE_COMMON_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_USE_COMMON_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_USE_DEFAULT_SETTINGS bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_AXI_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_AXI_LEN_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXI_LOCK_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_AWUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_WUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_BUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_ARUSER bound to: 0 - type: integer 
+	Parameter C_HAS_AXI_RUSER bound to: 0 - type: integer 
+	Parameter C_AXI_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_BUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXI_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TDATA bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TID bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TDEST bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TUSER bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TREADY bound to: 1 - type: integer 
+	Parameter C_HAS_AXIS_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TSTRB bound to: 0 - type: integer 
+	Parameter C_HAS_AXIS_TKEEP bound to: 0 - type: integer 
+	Parameter C_AXIS_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_AXIS_TID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TDEST_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TUSER_WIDTH bound to: 4 - type: integer 
+	Parameter C_AXIS_TSTRB_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIS_TKEEP_WIDTH bound to: 1 - type: integer 
+	Parameter C_WACH_TYPE bound to: 0 - type: integer 
+	Parameter C_WDCH_TYPE bound to: 0 - type: integer 
+	Parameter C_WRCH_TYPE bound to: 0 - type: integer 
+	Parameter C_RACH_TYPE bound to: 0 - type: integer 
+	Parameter C_RDCH_TYPE bound to: 0 - type: integer 
+	Parameter C_AXIS_TYPE bound to: 0 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WACH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WDCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_WRCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_RACH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_RDCH bound to: 1 - type: integer 
+	Parameter C_IMPLEMENTATION_TYPE_AXIS bound to: 1 - type: integer 
+	Parameter C_APPLICATION_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_APPLICATION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PRIM_FIFO_TYPE_WACH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_WDCH bound to: 1kx36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_WRCH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_RACH bound to: 512x36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_RDCH bound to: 1kx36 - type: string 
+	Parameter C_PRIM_FIFO_TYPE_AXIS bound to: 1kx18 - type: string 
+	Parameter C_USE_ECC_WACH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_WDCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_WRCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_RACH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_RDCH bound to: 0 - type: integer 
+	Parameter C_USE_ECC_AXIS bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_ERROR_INJECTION_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_DIN_WIDTH_WACH bound to: 1 - type: integer 
+	Parameter C_DIN_WIDTH_WDCH bound to: 64 - type: integer 
+	Parameter C_DIN_WIDTH_WRCH bound to: 2 - type: integer 
+	Parameter C_DIN_WIDTH_RACH bound to: 32 - type: integer 
+	Parameter C_DIN_WIDTH_RDCH bound to: 64 - type: integer 
+	Parameter C_DIN_WIDTH_AXIS bound to: 1 - type: integer 
+	Parameter C_WR_DEPTH_WACH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_WDCH bound to: 1024 - type: integer 
+	Parameter C_WR_DEPTH_WRCH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_RACH bound to: 16 - type: integer 
+	Parameter C_WR_DEPTH_RDCH bound to: 1024 - type: integer 
+	Parameter C_WR_DEPTH_AXIS bound to: 1024 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_WRCH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RACH bound to: 4 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_RDCH bound to: 10 - type: integer 
+	Parameter C_WR_PNTR_WIDTH_AXIS bound to: 10 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WACH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WDCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_WRCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_RACH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_RDCH bound to: 0 - type: integer 
+	Parameter C_HAS_DATA_COUNTS_AXIS bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WACH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WDCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_WRCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_RACH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_RDCH bound to: 0 - type: integer 
+	Parameter C_HAS_PROG_FLAGS_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WACH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WDCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_WRCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_RACH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_RDCH bound to: 1023 - type: integer 
+	Parameter C_PROG_FULL_THRESH_ASSERT_VAL_AXIS bound to: 1023 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WACH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WDCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_WRCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_RACH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_RDCH bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_TYPE_AXIS bound to: 0 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WACH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WDCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_WRCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_RACH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_RDCH bound to: 1022 - type: integer 
+	Parameter C_PROG_EMPTY_THRESH_ASSERT_VAL_AXIS bound to: 1022 - type: integer 
+	Parameter C_REG_SLICE_MODE_WACH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_WDCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_WRCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_RACH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_RDCH bound to: 0 - type: integer 
+	Parameter C_REG_SLICE_MODE_AXIS bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'fifo_generator_v13_2_1' declared at 'e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFOs/hdl/fifo_generator_v13_2_vhsyn_rfs.vhd:38483' bound to instance 'U0' of component 'fifo_generator_v13_2_1' [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFOs/synth/FTDI_FIFOs.vhd:546]
+INFO: [Synth 8-638] synthesizing module 'xpm_cdc_async_rst' [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1177]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1228]
+INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_async_rst' (1#1) [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1177]
+INFO: [Synth 8-638] synthesizing module 'xpm_cdc_single' [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:205]
+INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_single' (2#1) [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-638] synthesizing module 'xpm_cdc_gray' [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:300]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:390]
+INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_gray' (14#1) [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:300]
+INFO: [Synth 8-256] done synthesizing module 'FTDI_FIFOs' (31#1) [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFOs/synth/FTDI_FIFOs.vhd:76]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH[5]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH[4]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH[3]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH[2]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH[1]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH[0]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_ASSERT[5]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_ASSERT[4]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_ASSERT[3]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_ASSERT[2]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_ASSERT[1]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_ASSERT[0]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_NEGATE[5]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_NEGATE[4]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_NEGATE[3]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_NEGATE[2]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_NEGATE[1]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port PROG_FULL_THRESH_NEGATE[0]
+WARNING: [Synth 8-3331] design wr_pf_as has unconnected port SRST
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_RST
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port SRST
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port SAFETY_CKT_WR_RST
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[5]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[4]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[3]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[2]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[1]
+WARNING: [Synth 8-3331] design wr_status_flags_as has unconnected port WR_PNTR_PLUS3[0]
+WARNING: [Synth 8-3331] design wr_bin_cntr has unconnected port SRST
+WARNING: [Synth 8-3331] design wr_logic has unconnected port WR_EN_INTO_LOGIC
+WARNING: [Synth 8-3331] design wr_logic has unconnected port WR_RST_INTO_LOGIC
+WARNING: [Synth 8-3331] design wr_logic has unconnected port RD_EN
+WARNING: [Synth 8-3331] design wr_logic has unconnected port SRST_FULL_FF
+WARNING: [Synth 8-3331] design wr_logic has unconnected port WR_RST_BUSY
+WARNING: [Synth 8-3331] design wr_logic has unconnected port EMPTY
+WARNING: [Synth 8-3331] design wr_logic has unconnected port RAM_RD_EN
+WARNING: [Synth 8-3331] design wr_logic has unconnected port ALMOST_EMPTY
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH[5]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH[4]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH[3]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH[2]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH[1]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH[0]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_ASSERT[5]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_ASSERT[4]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_ASSERT[3]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_ASSERT[2]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_ASSERT[1]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_ASSERT[0]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_NEGATE[5]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_NEGATE[4]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_NEGATE[3]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_NEGATE[2]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_NEGATE[1]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port PROG_EMPTY_THRESH_NEGATE[0]
+WARNING: [Synth 8-3331] design rd_pe_as has unconnected port SRST
+WARNING: [Synth 8-3331] design rd_handshaking_flags has unconnected port SRST
+WARNING: [Synth 8-3331] design rd_handshaking_flags has unconnected port RD_RST_BUSY
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port SRST
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port SAFETY_CKT_RD_RST
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[5]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[4]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[3]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[2]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[1]
+WARNING: [Synth 8-3331] design rd_status_flags_as has unconnected port RD_PNTR_PLUS2[0]
+WARNING: [Synth 8-3331] design rd_bin_cntr has unconnected port SRST
+WARNING: [Synth 8-3331] design rd_logic has unconnected port RD_EN_INTO_LOGIC
+WARNING: [Synth 8-3331] design rd_logic has unconnected port RD_RST_INTO_LOGIC
+WARNING: [Synth 8-3331] design rd_logic has unconnected port RAM_WR_EN
+WARNING: [Synth 8-3331] design rd_logic has unconnected port RST_FULL_FF
+WARNING: [Synth 8-3331] design rd_logic has unconnected port ALMOST_FULL_FB
+WARNING: [Synth 8-3331] design rd_logic has unconnected port FULL
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[5]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[4]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[3]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[2]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[1]
+WARNING: [Synth 8-3331] design rd_logic has unconnected port WR_PNTR_PLUS1_RD[0]
+WARNING: [Synth 8-3331] design clk_x_pntrs has unconnected port WR_RST
+WARNING: [Synth 8-3331] design clk_x_pntrs has unconnected port RD_RST
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port SSRA
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port REGCEA
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port SSRB
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port WEB[0]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[35]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[34]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[33]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[32]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[31]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[30]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[29]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[28]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[27]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[26]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[25]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[24]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[23]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[22]
+WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port DINB[21]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1495.688 ; gain = 4.703
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1495.688 ; gain = 4.703
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFOs/FTDI_FIFOs_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFOs/FTDI_FIFOs_ooc.xdc] for cell 'U0'
+Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFOs/FTDI_FIFOs.xdc] for cell 'U0'
+Finished Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFOs/FTDI_FIFOs.xdc] for cell 'U0'
+Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFOs/FTDI_FIFOs_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFOs/FTDI_FIFOs_clocks.xdc] for cell 'U0'
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/FTDI_FIFOs_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/FTDI_FIFOs_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/FTDI_FIFOs_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/FTDI_FIFOs_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/FTDI_FIFOs_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/FTDI_FIFOs_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1572.992 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 1572.992 ; gain = 82.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k160tffg676-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 1572.992 ; gain = 82.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /\gntv_or_sync_fifo.gcx.clkx /rd_pntr_cdc_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /\gntv_or_sync_fifo.gcx.clkx /wr_pntr_cdc_inst. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd . (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for U0/inst_fifo_gen/\gconvfifo.rf /\grf.rf /rstblk/\ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst . (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 1572.992 ; gain = 82.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:18 ; elapsed = 00:01:19 . Memory (MB): peak = 1572.992 ; gain = 82.008
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 2     
++---XORs : 
+	   2 Input      6 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 34    
++---Registers : 
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 13    
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 13    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module xpm_cdc_async_rst 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module xpm_cdc_single 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+Module reset_blk_ramfifo 
+Detailed RTL Component Info : 
++---Registers : 
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
+Module xpm_cdc_gray 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      6 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 5     
++---Registers : 
+	                6 Bit    Registers := 4     
+Module rd_bin_cntr 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 2     
+Module compare 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 6     
+Module rd_status_flags_as 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module rd_handshaking_flags 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module rd_pe_as 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module wr_bin_cntr 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 3     
+Module wr_status_flags_as 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module wr_pf_as 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 600 (col length:100)
+BRAMs: 650 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.gpf.wrpf/gdiff.diff_pntr_pad_reg[0]) is unused and will be removed from module fifo_generator_v13_2_1.
+WARNING: [Synth 8-3332] Sequential element (inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.gpe.rdpe/gdiff.diff_pntr_pad_reg[0]) is unused and will be removed from module fifo_generator_v13_2_1.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:19 ; elapsed = 00:01:20 . Memory (MB): peak = 1572.992 ; gain = 82.008
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:20 ; elapsed = 00:01:21 . Memory (MB): peak = 1572.992 ; gain = 82.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:20 ; elapsed = 00:01:21 . Memory (MB): peak = 1572.992 ; gain = 82.008
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:20 ; elapsed = 00:01:21 . Memory (MB): peak = 1572.992 ; gain = 82.008
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:21 ; elapsed = 00:01:22 . Memory (MB): peak = 1572.992 ; gain = 82.008
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:21 ; elapsed = 00:01:22 . Memory (MB): peak = 1572.992 ; gain = 82.008
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:21 ; elapsed = 00:01:22 . Memory (MB): peak = 1572.992 ; gain = 82.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:21 ; elapsed = 00:01:22 . Memory (MB): peak = 1572.992 ; gain = 82.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:21 ; elapsed = 00:01:22 . Memory (MB): peak = 1572.992 ; gain = 82.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:21 ; elapsed = 00:01:22 . Memory (MB): peak = 1572.992 ; gain = 82.008
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |     4|
+|2     |LUT1     |     2|
+|3     |LUT2     |    32|
+|4     |LUT3     |     7|
+|5     |LUT4     |    11|
+|6     |LUT5     |     7|
+|7     |LUT6     |    11|
+|8     |RAMB18E1 |     1|
+|9     |FDCE     |    45|
+|10    |FDPE     |    20|
+|11    |FDRE     |    56|
++------+---------+------+
+
+Report Instance Areas: 
++------+-------------------------------------------------------------------------------------+-----------------------------+------+
+|      |Instance                                                                             |Module                       |Cells |
++------+-------------------------------------------------------------------------------------+-----------------------------+------+
+|1     |top                                                                                  |                             |   196|
+|2     |  U0                                                                                 |fifo_generator_v13_2_1       |   196|
+|3     |    inst_fifo_gen                                                                    |fifo_generator_v13_2_1_synth |   196|
+|4     |      \gconvfifo.rf                                                                  |fifo_generator_top           |   196|
+|5     |        \grf.rf                                                                      |fifo_generator_ramfifo       |   196|
+|6     |          \gntv_or_sync_fifo.gcx.clkx                                                |clk_x_pntrs                  |    77|
+|7     |            wr_pntr_cdc_inst                                                         |xpm_cdc_gray__1              |    34|
+|8     |            rd_pntr_cdc_inst                                                         |xpm_cdc_gray                 |    34|
+|9     |          \gntv_or_sync_fifo.gl0.rd                                                  |rd_logic                     |    38|
+|10    |            \gras.gpe.rdpe                                                           |rd_pe_as                     |    11|
+|11    |            \gras.rsts                                                               |rd_status_flags_as           |     5|
+|12    |            \grhf.rhf                                                                |rd_handshaking_flags         |     1|
+|13    |            rpntr                                                                    |rd_bin_cntr                  |    21|
+|14    |          \gntv_or_sync_fifo.gl0.wr                                                  |wr_logic                     |    51|
+|15    |            \gwas.gpf.wrpf                                                           |wr_pf_as                     |    11|
+|16    |            \gwas.wsts                                                               |wr_status_flags_as           |     3|
+|17    |            wpntr                                                                    |wr_bin_cntr                  |    37|
+|18    |          \gntv_or_sync_fifo.mem                                                     |memory                       |     1|
+|19    |            \gbm.gbmg.gbmga.ngecc.bmg                                                |blk_mem_gen_v8_4_1           |     1|
+|20    |              inst_blk_mem_gen                                                       |blk_mem_gen_v8_4_1_synth     |     1|
+|21    |                \gnbram.gnativebmg.native_blk_mem_gen                                |blk_mem_gen_top              |     1|
+|22    |                  \valid.cstr                                                        |blk_mem_gen_generic_cstr     |     1|
+|23    |                    \ramloop[0].ram.r                                                |blk_mem_gen_prim_width       |     1|
+|24    |                      \prim_noinit.ram                                               |blk_mem_gen_prim_wrapper     |     1|
+|25    |          rstblk                                                                     |reset_blk_ramfifo            |    29|
+|26    |            \ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst                     |xpm_cdc_async_rst__1         |     2|
+|27    |            \ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst             |xpm_cdc_async_rst            |     2|
+|28    |            \ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd  |xpm_cdc_single__1            |     4|
+|29    |            \ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr  |xpm_cdc_single               |     4|
++------+-------------------------------------------------------------------------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:21 ; elapsed = 00:01:22 . Memory (MB): peak = 1572.992 ; gain = 82.008
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 453 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:01:20 . Memory (MB): peak = 1572.992 ; gain = 4.703
+Synthesis Optimization Complete : Time (s): cpu = 00:01:21 ; elapsed = 00:01:22 . Memory (MB): peak = 1572.992 ; gain = 82.008
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFOs/FTDI_FIFOs_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFOs/FTDI_FIFOs_ooc.xdc] for cell 'U0'
+Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFOs/FTDI_FIFOs.xdc] for cell 'U0'
+Finished Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFOs/FTDI_FIFOs.xdc] for cell 'U0'
+Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFOs/FTDI_FIFOs_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [e:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFOs/FTDI_FIFOs_clocks.xdc] for cell 'U0'
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl:2]
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.rst_rd_reg2_inst'
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_async_rst.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.rst_wr_reg2_inst'
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst'
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst'
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_rrst_wr'
+Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+Finished Sourcing Tcl File [c:/Xilinx/Vivado/2017.4/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl] for cell 'U0/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.g7serrst.gnsckt_wrst.gic_rst.xpm_cdc_single_inst_wrst_rd'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:22 ; elapsed = 00:01:23 . Memory (MB): peak = 1585.207 ; gain = 94.223
+INFO: [Coretcl 2-1174] Renamed 28 cell refs.
+INFO: [Timing 38-35] Done setting XDC timing constraints.

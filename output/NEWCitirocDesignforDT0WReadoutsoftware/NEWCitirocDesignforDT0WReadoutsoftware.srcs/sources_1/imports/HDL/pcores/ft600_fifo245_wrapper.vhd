@@ -636,6 +636,41 @@ Port (
 		REG_HOLD_TIME_WR : OUT STD_LOGIC_VECTOR(31 downto 0); 
 		INT_HOLD_TIME_RD : OUT STD_LOGIC_VECTOR(0 downto 0); 
 		INT_HOLD_TIME_WR : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		REG_FR_IFP_RD : IN STD_LOGIC_VECTOR(31 downto 0); 
+		REG_FR_IFP_WR : OUT STD_LOGIC_VECTOR(31 downto 0); 
+		INT_FR_IFP_RD : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		INT_FR_IFP_WR : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		REG_FR_LIMIT_RD : IN STD_LOGIC_VECTOR(31 downto 0); 
+		REG_FR_LIMIT_WR : OUT STD_LOGIC_VECTOR(31 downto 0); 
+		INT_FR_LIMIT_RD : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		INT_FR_LIMIT_WR : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		REG_FR_IFP2_RD : IN STD_LOGIC_VECTOR(31 downto 0); 
+		REG_FR_IFP2_WR : OUT STD_LOGIC_VECTOR(31 downto 0); 
+		INT_FR_IFP2_RD : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		INT_FR_IFP2_WR : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		REG_FR_MODE_RD : IN STD_LOGIC_VECTOR(31 downto 0); 
+		REG_FR_MODE_WR : OUT STD_LOGIC_VECTOR(31 downto 0); 
+		INT_FR_MODE_RD : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		INT_FR_MODE_WR : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		REG_FR_DBG1_RD : IN STD_LOGIC_VECTOR(31 downto 0); 
+		REG_FR_DBG1_WR : OUT STD_LOGIC_VECTOR(31 downto 0); 
+		INT_FR_DBG1_RD : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		INT_FR_DBG1_WR : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		REG_FR_DBG2_RD : IN STD_LOGIC_VECTOR(31 downto 0); 
+		REG_FR_DBG2_WR : OUT STD_LOGIC_VECTOR(31 downto 0); 
+		INT_FR_DBG2_RD : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		INT_FR_DBG2_WR : OUT STD_LOGIC_VECTOR(0 downto 0); 
+	BUS_CP_0_READ_DATA : IN STD_LOGIC_VECTOR(31 downto 0); 
+	BUS_CP_0_WRITE_DATA : OUT STD_LOGIC_VECTOR(31 downto 0); 
+	BUS_CP_0_W_INT : OUT STD_LOGIC_VECTOR(0 downto 0); 
+	BUS_CP_0_R_INT : OUT STD_LOGIC_VECTOR(0 downto 0); 
+	BUS_CP_0_VLD : IN STD_LOGIC_VECTOR(0 downto 0); 
+		REG_CP_0_READ_STATUS_RD : IN STD_LOGIC_VECTOR(31 downto 0); 
+		INT_CP_0_READ_STATUS_RD : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		REG_CP_0_READ_VALID_WORDS_RD : IN STD_LOGIC_VECTOR(31 downto 0); 
+		INT_CP_0_READ_VALID_WORDS_RD : OUT STD_LOGIC_VECTOR(0 downto 0); 
+		REG_CP_0_CONFIG_WR : OUT STD_LOGIC_VECTOR(31 downto 0); 
+		INT_CP_0_CONFIG_WR : OUT STD_LOGIC_VECTOR(0 downto 0); 
 		REG_UNIQUE_RD : IN STD_LOGIC_VECTOR(31 downto 0); 
 		REG_UNIQUE_WR : OUT STD_LOGIC_VECTOR(31 downto 0); 
 	
@@ -950,7 +985,7 @@ BUS_Oscilloscope_1_READ_ADDRESS <= BUS_ADDR(15 downto 0) when (addr >= x"000B000
 BUS_RateMeter_1_READ_ADDRESS <= BUS_ADDR(15 downto 0) when (addr >= x"000D0000" And addr < x"000E0000") else (others => '0');BUS_Oscilloscope_2_R_INT(0) <= f_BUS_INT_RD when (addr >= x"000F0000" And addr < x"00100000") else '0';
 BUS_Oscilloscope_2_READ_ADDRESS <= BUS_ADDR(15 downto 0) when (addr >= x"000F0000" And addr < x"00100000") else (others => '0');BUS_CitirocFrame0_R_INT(0) <= f_BUS_INT_RD when (addr >= x"0002001A" And addr < x"0002001B") else '0';BUS_Oscilloscope_0_R_INT(0) <= f_BUS_INT_RD when (addr >= x"00090000" And addr < x"000A0000") else '0';
 BUS_Oscilloscope_0_READ_ADDRESS <= BUS_ADDR(15 downto 0) when (addr >= x"00090000" And addr < x"000A0000") else (others => '0');BUS_Oscilloscope_3_R_INT(0) <= f_BUS_INT_RD when (addr >= x"00010000" And addr < x"00020000") else '0';
-BUS_Oscilloscope_3_READ_ADDRESS <= BUS_ADDR(15 downto 0) when (addr >= x"00010000" And addr < x"00020000") else (others => '0');
+BUS_Oscilloscope_3_READ_ADDRESS <= BUS_ADDR(15 downto 0) when (addr >= x"00010000" And addr < x"00020000") else (others => '0');BUS_CP_0_R_INT(0) <= f_BUS_INT_RD when (addr >= x"00200000" And addr < x"00200001") else '0';
 f_BUS_DATA_RD <= BUS_Test_0_READ_DATA when  (addr >= x"FFFD0000" And addr < x"FFFDFFFF") else 
  BUS_FLASH_0_READ_DATA when (addr >= x"FFFE0000" And addr < x"FFFEE000") else 
 BUS_RateMeter_2_READ_DATA  when  addr >= x"00030000" and addr < x"00040000" else 
@@ -961,7 +996,7 @@ BUS_RateMeter_1_READ_DATA  when  addr >= x"000D0000" and addr < x"000E0000" else
 BUS_Oscilloscope_2_READ_DATA  when  addr >= x"000F0000" and addr < x"00100000" else 
  BUS_CitirocFrame0_READ_DATA when (addr >= x"0002001A" And addr < x"0002001B") else BUS_Oscilloscope_0_READ_DATA  when  addr >= x"00090000" and addr < x"000A0000" else 
 BUS_Oscilloscope_3_READ_DATA  when  addr >= x"00010000" and addr < x"00020000" else 
- f_BUS_DATA_RD_REG;
+ BUS_CP_0_READ_DATA when (addr >= x"00200000" And addr < x"00200001") else  f_BUS_DATA_RD_REG;
  f_BUS_DATASTROBE <=BUS_Test_0_VLD(0) when  (addr >= x"FFFD0000" And addr < x"FFFDFFFF") else 
 BUS_FLASH_0_VLD(0) when (addr >= x"FFFE0000" And addr < x"FFFEE000") else 
  BUS_RateMeter_2_VLD(0) when  addr >= x"00030000" and addr < x"00040000" else 
@@ -972,7 +1007,7 @@ BUS_FLASH_0_VLD(0) when (addr >= x"FFFE0000" And addr < x"FFFEE000") else
  BUS_Oscilloscope_2_VLD(0) when  addr >= x"000F0000" and addr < x"00100000" else 
   BUS_CitirocFrame0_VLD(0) when (addr >= x"0002001A" And addr < x"0002001B") else  BUS_Oscilloscope_0_VLD(0) when  addr >= x"00090000" and addr < x"000A0000" else 
  BUS_Oscilloscope_3_VLD(0) when  addr >= x"00010000" and addr < x"00020000" else 
- f_BUS_DATASTROBE_REG;
+  BUS_CP_0_VLD(0) when (addr >= x"00200000" And addr < x"00200001") else  f_BUS_DATASTROBE_REG;
 
 	
     --f_BUS_DATA_RD    <=     BUS_Test_0_READ_DATA when  (addr >= x"FFFD0000" And addr < x"FFFDFFFF") else 
@@ -1535,6 +1570,29 @@ BUS_FLASH_0_VLD(0) when (addr >= x"FFFE0000" And addr < x"FFFEE000") else
 		REG_HOLD_TIME_WR <= (others => '0');
 		INT_HOLD_TIME_WR <= "0";
 		INT_HOLD_TIME_RD <= "0";
+		REG_FR_IFP_WR <= (others => '0');
+		INT_FR_IFP_WR <= "0";
+		INT_FR_IFP_RD <= "0";
+		REG_FR_LIMIT_WR <= (others => '0');
+		INT_FR_LIMIT_WR <= "0";
+		INT_FR_LIMIT_RD <= "0";
+		REG_FR_IFP2_WR <= (others => '0');
+		INT_FR_IFP2_WR <= "0";
+		INT_FR_IFP2_RD <= "0";
+		REG_FR_MODE_WR <= (others => '0');
+		INT_FR_MODE_WR <= "0";
+		INT_FR_MODE_RD <= "0";
+		REG_FR_DBG1_WR <= (others => '0');
+		INT_FR_DBG1_WR <= "0";
+		INT_FR_DBG1_RD <= "0";
+		REG_FR_DBG2_WR <= (others => '0');
+		INT_FR_DBG2_WR <= "0";
+		INT_FR_DBG2_RD <= "0";
+	BUS_CP_0_W_INT <= "0";
+		INT_CP_0_READ_STATUS_RD <= "0";
+		INT_CP_0_READ_VALID_WORDS_RD <= "0";
+		REG_CP_0_CONFIG_WR <= (others => '0');
+		INT_CP_0_CONFIG_WR <= "0";
 			
 			f_BUS_DATASTROBE_REG <= '0';
             INT_FLASH_CNTR_RD <= "0";
@@ -1806,6 +1864,22 @@ BUS_FLASH_0_VLD(0) when (addr >= x"FFFE0000" And addr < x"FFFEE000") else
 		INT_Oscilloscope_3_CONFIG_DECIMATOR_WR <= "0";
 		INT_HOLD_TIME_WR <= "0";
 		INT_HOLD_TIME_RD <= "0";
+		INT_FR_IFP_WR <= "0";
+		INT_FR_IFP_RD <= "0";
+		INT_FR_LIMIT_WR <= "0";
+		INT_FR_LIMIT_RD <= "0";
+		INT_FR_IFP2_WR <= "0";
+		INT_FR_IFP2_RD <= "0";
+		INT_FR_MODE_WR <= "0";
+		INT_FR_MODE_RD <= "0";
+		INT_FR_DBG1_WR <= "0";
+		INT_FR_DBG1_RD <= "0";
+		INT_FR_DBG2_WR <= "0";
+		INT_FR_DBG2_RD <= "0";
+	BUS_CP_0_W_INT <= "0";
+		INT_CP_0_READ_STATUS_RD <= "0";
+		INT_CP_0_READ_VALID_WORDS_RD <= "0";
+		INT_CP_0_CONFIG_WR <= "0";
   
             f_BUS_DATASTROBE_REG <= '0';
             INT_FLASH_CNTR_RD <= "0";
@@ -2701,6 +2775,38 @@ BUS_FLASH_0_VLD(0) when (addr >= x"FFFE0000" And addr < x"FFFEE000") else
 			REG_HOLD_TIME_WR <= wreg; 
 			INT_HOLD_TIME_WR <= "1"; 
 		end if;
+		if addr = x"00000010" then
+			REG_FR_IFP_WR <= wreg; 
+			INT_FR_IFP_WR <= "1"; 
+		end if;
+		if addr = x"00000011" then
+			REG_FR_LIMIT_WR <= wreg; 
+			INT_FR_LIMIT_WR <= "1"; 
+		end if;
+		if addr = x"00000012" then
+			REG_FR_IFP2_WR <= wreg; 
+			INT_FR_IFP2_WR <= "1"; 
+		end if;
+		if addr = x"00000013" then
+			REG_FR_MODE_WR <= wreg; 
+			INT_FR_MODE_WR <= "1"; 
+		end if;
+		if addr = x"00000014" then
+			REG_FR_DBG1_WR <= wreg; 
+			INT_FR_DBG1_WR <= "1"; 
+		end if;
+		if addr = x"00000015" then
+			REG_FR_DBG2_WR <= wreg; 
+			INT_FR_DBG2_WR <= "1"; 
+		end if;
+		If addr >= x"00200000" And addr < x"00200001" Then
+			BUS_CP_0_WRITE_DATA <= wreg; 
+			BUS_CP_0_W_INT <= "1"; 
+		End If;
+		if addr = x"00200003" then
+			REG_CP_0_CONFIG_WR <= wreg; 
+			INT_CP_0_CONFIG_WR <= "1"; 
+		end if;
 
             end if;
     
@@ -2837,6 +2943,30 @@ BUS_FLASH_0_VLD(0) when (addr >= x"FFFE0000" And addr < x"FFFEE000") else
 		End If;
 		if addr = x"0000000F" then
 			rreg := REG_HOLD_TIME_RD; 
+		End If;
+		if addr = x"00000010" then
+			rreg := REG_FR_IFP_RD; 
+		End If;
+		if addr = x"00000011" then
+			rreg := REG_FR_LIMIT_RD; 
+		End If;
+		if addr = x"00000012" then
+			rreg := REG_FR_IFP2_RD; 
+		End If;
+		if addr = x"00000013" then
+			rreg := REG_FR_MODE_RD; 
+		End If;
+		if addr = x"00000014" then
+			rreg := REG_FR_DBG1_RD; 
+		End If;
+		if addr = x"00000015" then
+			rreg := REG_FR_DBG2_RD; 
+		End If;
+		if addr = x"00200001" then
+			rreg := REG_CP_0_READ_STATUS_RD; 
+		End If;
+		if addr = x"00200002" then
+			rreg := REG_CP_0_READ_VALID_WORDS_RD; 
 		End If;
 	
                

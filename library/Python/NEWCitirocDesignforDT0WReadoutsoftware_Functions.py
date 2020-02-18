@@ -27,6 +27,8 @@
 
 
 
+
+
 import NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile
 from ctypes import *
 import array
@@ -385,6 +387,54 @@ def REG_HOLD_TIME_GET(handle):
 
 def REG_HOLD_TIME_SET(data, handle):
     err = __abstracted_reg_write(data, NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_HOLD_TIME, handle)
+    return err
+
+def REG_FR_IFP_GET(handle):
+    [err, data] = __abstracted_reg_read(NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_FR_IFP, handle)
+    return err, data
+
+def REG_FR_IFP_SET(data, handle):
+    err = __abstracted_reg_write(data, NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_FR_IFP, handle)
+    return err
+
+def REG_FR_LIMIT_GET(handle):
+    [err, data] = __abstracted_reg_read(NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_FR_LIMIT, handle)
+    return err, data
+
+def REG_FR_LIMIT_SET(data, handle):
+    err = __abstracted_reg_write(data, NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_FR_LIMIT, handle)
+    return err
+
+def REG_FR_IFP2_GET(handle):
+    [err, data] = __abstracted_reg_read(NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_FR_IFP2, handle)
+    return err, data
+
+def REG_FR_IFP2_SET(data, handle):
+    err = __abstracted_reg_write(data, NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_FR_IFP2, handle)
+    return err
+
+def REG_FR_MODE_GET(handle):
+    [err, data] = __abstracted_reg_read(NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_FR_MODE, handle)
+    return err, data
+
+def REG_FR_MODE_SET(data, handle):
+    err = __abstracted_reg_write(data, NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_FR_MODE, handle)
+    return err
+
+def REG_FR_DBG1_GET(handle):
+    [err, data] = __abstracted_reg_read(NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_FR_DBG1, handle)
+    return err, data
+
+def REG_FR_DBG1_SET(data, handle):
+    err = __abstracted_reg_write(data, NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_FR_DBG1, handle)
+    return err
+
+def REG_FR_DBG2_GET(handle):
+    [err, data] = __abstracted_reg_read(NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_FR_DBG2, handle)
+    return err, data
+
+def REG_FR_DBG2_SET(data, handle):
+    err = __abstracted_reg_write(data, NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_FR_DBG2, handle)
     return err
 
 
@@ -1068,4 +1118,80 @@ def OSCILLOSCOPE_Oscilloscope_0_RECONSTRUCT_DATA(OscilloscopeData, OscilloscopeP
                 Digital3[k+ OscilloscopeSamples * n] = (OscilloscopeData[i+ OscilloscopeSamples * n] >> 19 & 1)
                 k = k + 1
     return Analog, Digital0, Digital1,Digital2, Digital3
+
+
+
+
+def CPACK_CP_0_RESET(handle):
+	err = __abstracted_reg_write(2, NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_CP_0_CONFIG, handle)
+	err = __abstracted_reg_write(0, NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_CP_0_CONFIG, handle)
+	return err
+
+def CPACK_CP_0_FLUSH(handle):
+	err = __abstracted_reg_write(4, NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_CP_0_CONFIG, handle)
+	err = __abstracted_reg_write(0, NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_CP_0_CONFIG, handle)
+	return err
+
+def CPACK_CP_0_START(handle):
+	err = __abstracted_reg_write(2, NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_CP_0_CONFIG, handle)
+	if (err != 0):
+	   return False
+	err = __abstracted_reg_write(0, NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_CP_0_CONFIG, handle)
+	if (err != 0):
+	   return False
+	err = __abstracted_reg_write(1, NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_CP_0_CONFIG, handle)
+	if (err != 0):
+	   return False
+	return True
+
+def CPACK_CP_0_GET_STATUS(handle):
+	[err, status] = __abstracted_reg_read(NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_CP_0_READ_STATUS, handle)
+	status = status & 0xf
+	return err, status
+
+def CPACK_CP_0_GET_AVAILABLE_DATA(handle):
+	[err, status] = __abstracted_reg_read(NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_CP_0_READ_VALID_WORDS, handle)
+	return err, status
+
+def CPACK_CP_0_GET_DATA(n_packet, timeout_ms, handle):
+	data_length = n_packet *( 3 + <<<NUMBER OF PACKET LINES AFTER THE HEADER HERE>>>)
+	[err, data, read_data, valid_data] = __abstracted_fifo_read(data_length, NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_CP_0_FIFOADDRESS, NEWCitirocDesignforDT0WReadoutsoftware_RegisterFile.SCI_REG_CP_0_READ_STATUS, True, timeout_ms, handle)
+	return err, data, read_data, valid_data
+
+
+def CPACK_CP_0_RECONSTRUCT_DATA(FrameData):
+	in_sync = 0
+	tot_data = len(FrameData)
+	n_ch = <<<NUMBER OF PACKET LINES AFTER THE HEADER HERE>>>
+	n_packet = tot_data / (n_ch + 3)
+	event_energy, Time_Code, Pack_Id, Energy = ([] for i in range(4))
+	for i in range(len(FrameData)):
+		mpe = FrameData[i]
+		if (in_sync == 0):
+			if (mpe != 0x<<<YOUR HEADER HERE>>>):
+				continue
+			in_sync = 1
+			continue
+		if (in_sync == 1):
+			event_timecode = mpe 
+			Time_Code.append(event_timecode)
+			in_sync = 2
+			continue
+		if (in_sync == 2):
+			Pack_Id.append(mpe)
+			in_sync = 3
+			ch_index = 0
+			continue
+		if (in_sync == 3):
+			if (mpe == 0x<<<YOUR HEADER HERE>>>):
+				in_sync = 1
+			else:
+				ev_energy = mpe
+				event_energy.append(ev_energy)
+				ch_index += 1
+				if (ch_index == n_ch):
+					Energy.append(event_energy)
+					event_energy = []
+					in_sync = 0
+	return Time_Code, Pack_Id, Energy
 

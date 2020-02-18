@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Thu Dec 12 18:58:51 2019
+-- Date        : Tue Feb 18 21:15:04 2020
 -- Host        : ABBA-NI running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               C:/OpenHardware/UserProject/NEWCitirocDesignforDT0WReadoutsoftware/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFOs/FTDI_FIFOs_stub.vhdl
+--               E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.srcs/sources_1/ip/FTDI_FIFOs/FTDI_FIFOs_stub.vhdl
 -- Design      : FTDI_FIFOs
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7k160tffg676-2

@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>9a17aa61-e639-4aaf-92e0-c48e48beff14</ProjectGuid>
+    <ProjectGuid>92efdbad-da61-4b42-b69d-069a1817cd27</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>NEWCitirocDesignforDT0WReadoutsoftware</RootNamespace>
 	<ProjectName>NEWCitirocDesignforDT0WReadoutsoftware</ProjectName>
