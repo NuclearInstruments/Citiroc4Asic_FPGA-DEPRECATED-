@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Feb 19 08:59:01 2020
+# Process ID: 15852
+# Current directory: E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL
+# Command line: vivado.exe -mode batch -source E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/NEWCitirocDesignforDT0WReadoutsoftware_program.tcl
+# Log file: E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/vivado.log
+# Journal file: E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL\vivado.jou
+#-----------------------------------------------------------
+source E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/NEWCitirocDesignforDT0WReadoutsoftware_program.tcl
+# open_hw
+# connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+ERROR: [Labtoolstcl 44-199] No matching targets found on connected servers: localhost
+Resolution: If needed connect the desired target to a server and use command refresh_hw_server. Then rerun the get_hw_targets command.
+ERROR: [Common 17-39] 'get_hw_targets' failed due to earlier errors.
+
+    while executing
+"get_hw_targets"
+    invoked from within
+"foreach tgrt [get_hw_targets] {
+open_hw_target $tgrt
+if {[get_hw_devices xc7k160t_0*]  !="" } {
+set_property PROBES.FILE {} [lindex [get_hw_devices xc..."
+    (file "E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/NEWCitirocDesignforDT0WReadoutsoftware_program.tcl" line 3)
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 19 08:59:10 2020...

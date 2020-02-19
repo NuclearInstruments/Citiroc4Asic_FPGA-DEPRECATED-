@@ -1,0 +1,44 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Wed Feb 19 09:24:38 2020
+# Process ID: 4060
+# Current directory: E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL
+# Command line: vivado.exe -mode batch -source E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/NEWCitirocDesignforDT0WReadoutsoftware_program.tcl
+# Log file: E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/vivado.log
+# Journal file: E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL\vivado.jou
+#-----------------------------------------------------------
+source E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/NEWCitirocDesignforDT0WReadoutsoftware_program.tcl
+# open_hw
+# connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2017.4
+  **** Build date : Dec 15 2017-21:08:27
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+
+# foreach tgrt [get_hw_targets] {
+# open_hw_target $tgrt
+# if {[get_hw_devices xc7k160t_0*]  !="" } {
+# set_property PROBES.FILE {} [lindex [get_hw_devices xc7k160t_0*] 0]
+# set_property PROGRAM.FILE {E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware/NEWCitirocDesignforDT0WReadoutsoftware.runs/impl_1/TOP_NEWCitirocDesignforDT0WReadoutsoftware.bit} [lindex [get_hw_devices xc7k160t_0*] 0]
+# program_hw_devices [lindex [get_hw_devices xc7k160t_0*] 0]
+# refresh_hw_device [lindex [get_hw_devices xc7k160t_0*] 0]
+# }
+# close_hw_target
+# }
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210308A64E12
+INFO: [Labtools 27-3164] End of startup status: HIGH
+INFO: [Labtools 27-1434] Device xc7k160t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Digilent/210308A64E12
+# exit
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 19 09:24:48 2020...
