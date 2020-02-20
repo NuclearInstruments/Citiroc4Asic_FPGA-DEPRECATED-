@@ -1,6 +1,6 @@
-set outputDir E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware
+set outputDir E:/GIT/DT5550W-CITIROC/NEWCitirocDesignforDT0WReadoutsoftware/output/NEWCitirocDesignforDT0WReadoutsoftware
 file mkdir $outputDir
-create_project NEWCitirocDesignforDT0WReadoutsoftware E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/output/NEWCitirocDesignforDT0WReadoutsoftware -part XC7K160TFFG676-2 -force
+create_project NEWCitirocDesignforDT0WReadoutsoftware E:/GIT/DT5550W-CITIROC/NEWCitirocDesignforDT0WReadoutsoftware/output/NEWCitirocDesignforDT0WReadoutsoftware -part XC7K160TFFG676-2 -force
 set_property target_language VHDL [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY XPM_FIFO} [current_project]
 add_files -force pcores/clk_wiz_0.xcix
@@ -13,11 +13,11 @@ add_files -force pcores/FlashPageMemory.xci
 add_files -force pcores/FTDI_FIFOs.xci
 add_files -force pcores/FTDI_FIFO_AW.xci
 add_files -force pcores/TestBram.xci
-add_files -force E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/subpage_frameproc.vhd
-add_files -force E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/subpage_Framing.vhd
-add_files -force E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/subpage_Timer64.vhd
-add_files -force E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/subpage_TriggerLogic.vhd
-add_files -force E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/top_NEWCitirocDesignforDT0WReadoutsoftware.vhd
+add_files -force E:/GIT/DT5550W-CITIROC/NEWCitirocDesignforDT0WReadoutsoftware/HDL/subpage_frameproc.vhd
+add_files -force E:/GIT/DT5550W-CITIROC/NEWCitirocDesignforDT0WReadoutsoftware/HDL/subpage_Framing.vhd
+add_files -force E:/GIT/DT5550W-CITIROC/NEWCitirocDesignforDT0WReadoutsoftware/HDL/subpage_Timer64.vhd
+add_files -force E:/GIT/DT5550W-CITIROC/NEWCitirocDesignforDT0WReadoutsoftware/HDL/subpage_TriggerLogic.vhd
+add_files -force E:/GIT/DT5550W-CITIROC/NEWCitirocDesignforDT0WReadoutsoftware/HDL/top_NEWCitirocDesignforDT0WReadoutsoftware.vhd
 add_files -force pcores/ADC1.v
 add_files -force pcores/adcs_top.vhd
 add_files -force pcores/adcs_top.vhd
@@ -77,9 +77,9 @@ add_files -force pcores/xlx_oscilloscope_sync.vhd
 add_files -force pcores/xlx_oscilloscope_sync.vhd
 add_files -force pcores/xlx_soft_gd.vhd
 add_files -force pcores/xlx_soft_gd.vhd
-add_files -force -fileset constrs_1 E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/dt555w_constraints.xdc
+add_files -force -fileset constrs_1 E:/GIT/DT5550W-CITIROC/NEWCitirocDesignforDT0WReadoutsoftware/HDL/dt555w_constraints.xdc
 import_files -force -norecurse
-import_files -fileset constrs_1 -force -norecurse E:/GIT/DT5550W-CITIROC/DT5550W-Citiroc4Asic/HDL/dt555w_constraints.xdc
+import_files -fileset constrs_1 -force -norecurse E:/GIT/DT5550W-CITIROC/NEWCitirocDesignforDT0WReadoutsoftware/HDL/dt555w_constraints.xdc
 foreach ip [get_ips] {
 upgrade_ip [get_ips $ip]
 set ip_filename [get_property IP_FILE $ip]

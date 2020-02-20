@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OPENHARDWARE>
+   <FPGA>
+       <version>1.2</version>
+       <filename>TOP_NEWCitirocDesignforDT0WReadoutsoftware.bin</filename>
+   </FPGA>
+   <HWJSON>
+       <filename>RegisterFile.json</filename>
+   </HWJSON>
+</OPENHARDWARE>

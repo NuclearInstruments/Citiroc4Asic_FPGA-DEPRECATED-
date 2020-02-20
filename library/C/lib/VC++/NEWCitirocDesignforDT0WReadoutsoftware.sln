@@ -1,9 +1,9 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("6b863efb-0056-40aa-a928-5ff2f3a10e6c") = "NEWCitirocDesignforDT0WReadoutsoftware_Example", "NEWCitirocDesignforDT0WReadoutsoftware_EXAMPLE.vcxproj", "92efdbad-da61-4b42-b69d-069a1817cd27"
+Project("460e7c43-b17f-4a81-b626-2d2aec297220") = "NEWCitirocDesignforDT0WReadoutsoftware_Example", "NEWCitirocDesignforDT0WReadoutsoftware_EXAMPLE.vcxproj", "fde1580a-1c92-47c9-a593-cfe576964d8c"
 EndProject
-Project("6b863efb-0056-40aa-a928-5ff2f3a10e6c") = "NEWCitirocDesignforDT0WReadoutsoftware_LIB", "NEWCitirocDesignforDT0WReadoutsoftware_LIB.vcxproj", "69f14554-ac7a-47ee-8f57-1cde9cb7b323"
+Project("460e7c43-b17f-4a81-b626-2d2aec297220") = "NEWCitirocDesignforDT0WReadoutsoftware_LIB", "NEWCitirocDesignforDT0WReadoutsoftware_LIB.vcxproj", "1b25f0a5-42fb-493d-9842-a2e6fb75719b"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,14 +11,14 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		92efdbad-da61-4b42-b69d-069a1817cd27.Debug|x86.ActiveCfg = Debug|Win32
-		92efdbad-da61-4b42-b69d-069a1817cd27.Debug|x86.Build.0 = Debug|Win32
-		92efdbad-da61-4b42-b69d-069a1817cd27.Release|x86.ActiveCfg = Release|Win32
-		92efdbad-da61-4b42-b69d-069a1817cd27.Release|x86.Build.0 = Release|Win32
-		69f14554-ac7a-47ee-8f57-1cde9cb7b323.Debug|x86.ActiveCfg = Debug|Win32
-		69f14554-ac7a-47ee-8f57-1cde9cb7b323.Debug|x86.Build.0 = Debug|Win32
-		69f14554-ac7a-47ee-8f57-1cde9cb7b323.Release|x86.ActiveCfg = Release|Win32
-		69f14554-ac7a-47ee-8f57-1cde9cb7b323.Release|x86.Build.0 = Release|Win32
+		fde1580a-1c92-47c9-a593-cfe576964d8c.Debug|x86.ActiveCfg = Debug|Win32
+		fde1580a-1c92-47c9-a593-cfe576964d8c.Debug|x86.Build.0 = Debug|Win32
+		fde1580a-1c92-47c9-a593-cfe576964d8c.Release|x86.ActiveCfg = Release|Win32
+		fde1580a-1c92-47c9-a593-cfe576964d8c.Release|x86.Build.0 = Release|Win32
+		1b25f0a5-42fb-493d-9842-a2e6fb75719b.Debug|x86.ActiveCfg = Debug|Win32
+		1b25f0a5-42fb-493d-9842-a2e6fb75719b.Debug|x86.Build.0 = Debug|Win32
+		1b25f0a5-42fb-493d-9842-a2e6fb75719b.Release|x86.ActiveCfg = Release|Win32
+		1b25f0a5-42fb-493d-9842-a2e6fb75719b.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

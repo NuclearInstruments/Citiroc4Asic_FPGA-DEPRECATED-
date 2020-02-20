@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Tue Feb 18 21:34:18 2020
+| Date         : Wed Feb 19 18:06:56 2020
 | Host         : ABBA-NI running 64-bit major release  (build 9200)
 | Command      : report_utilization -file TOP_NEWCitirocDesignforDT0WReadoutsoftware_utilization_placed.rpt -pb TOP_NEWCitirocDesignforDT0WReadoutsoftware_utilization_placed.pb
 | Design       : TOP_NEWCitirocDesignforDT0WReadoutsoftware
@@ -31,8 +31,8 @@ Table of Contents
 +----------------------------+-------+-------+-----------+-------+
 |          Site Type         |  Used | Fixed | Available | Util% |
 +----------------------------+-------+-------+-----------+-------+
-| Slice LUTs                 | 20510 |     0 |    101400 | 20.23 |
-|   LUT as Logic             | 16812 |     0 |    101400 | 16.58 |
+| Slice LUTs                 | 20488 |     0 |    101400 | 20.21 |
+|   LUT as Logic             | 16790 |     0 |    101400 | 16.56 |
 |   LUT as Memory            |  3698 |     0 |     35000 | 10.57 |
 |     LUT as Distributed RAM |  3584 |     0 |           |       |
 |     LUT as Shift Register  |   114 |     0 |           |       |
@@ -69,13 +69,13 @@ Table of Contents
 +-------------------------------------------+-------+-------+-----------+-------+
 |                 Site Type                 |  Used | Fixed | Available | Util% |
 +-------------------------------------------+-------+-------+-----------+-------+
-| Slice                                     | 17083 |     0 |     25350 | 67.39 |
-|   SLICEL                                  | 11086 |     0 |           |       |
-|   SLICEM                                  |  5997 |     0 |           |       |
-| LUT as Logic                              | 16812 |     0 |    101400 | 16.58 |
-|   using O5 output only                    |    37 |       |           |       |
-|   using O6 output only                    | 15059 |       |           |       |
-|   using O5 and O6                         |  1716 |       |           |       |
+| Slice                                     | 17210 |     0 |     25350 | 67.89 |
+|   SLICEL                                  | 11190 |     0 |           |       |
+|   SLICEM                                  |  6020 |     0 |           |       |
+| LUT as Logic                              | 16790 |     0 |    101400 | 16.56 |
+|   using O5 output only                    |    38 |       |           |       |
+|   using O6 output only                    | 15014 |       |           |       |
+|   using O5 and O6                         |  1738 |       |           |       |
 | LUT as Memory                             |  3698 |     0 |     35000 | 10.57 |
 |   LUT as Distributed RAM                  |  3584 |     0 |           |       |
 |     using O5 output only                  |     0 |       |           |       |
@@ -85,10 +85,10 @@ Table of Contents
 |     using O5 output only                  |     2 |       |           |       |
 |     using O6 output only                  |   112 |       |           |       |
 |     using O5 and O6                       |     0 |       |           |       |
-| LUT Flip Flop Pairs                       |  6569 |     0 |    101400 |  6.48 |
-|   fully used LUT-FF pairs                 |   809 |       |           |       |
-|   LUT-FF pairs with one unused LUT output |  5524 |       |           |       |
-|   LUT-FF pairs with one unused Flip Flop  |  5196 |       |           |       |
+| LUT Flip Flop Pairs                       |  6580 |     0 |    101400 |  6.49 |
+|   fully used LUT-FF pairs                 |   810 |       |           |       |
+|   LUT-FF pairs with one unused LUT output |  5516 |       |           |       |
+|   LUT-FF pairs with one unused Flip Flop  |  5143 |       |           |       |
 | Unique Control Sets                       |  1169 |       |           |       |
 +-------------------------------------------+-------+-------+-----------+-------+
 * Note: Review the Control Sets Report for more information regarding control sets.

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k160tffg676-2" LaunchTime="1582057210">
+<GenRun Id="synth_1" LaunchPart="xc7k160tffg676-2" LaunchTime="1582131109">
   <File Type="PA-TCL" Name="TOP_NEWCitirocDesignforDT0WReadoutsoftware.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="TOP_NEWCitirocDesignforDT0WReadoutsoftware_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="TOP_NEWCitirocDesignforDT0WReadoutsoftware_reports.tcl"/>
@@ -103,7 +103,7 @@
     <File Path="$PSRCDIR/sources_1/imports/HDL/pcores/CitirocAnalogReadout.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/pcores/CitirocAnalogReadout.vhd"/>
-        <Attr Name="ImportTime" Val="1582056651"/>
+        <Attr Name="ImportTime" Val="1582130540"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -111,7 +111,7 @@
     <File Path="$PSRCDIR/sources_1/imports/HDL/pcores/CitirocFrameTransfer.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/pcores/CitirocFrameTransfer.vhd"/>
-        <Attr Name="ImportTime" Val="1582056650"/>
+        <Attr Name="ImportTime" Val="1582130539"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -119,7 +119,7 @@
     <File Path="$PSRCDIR/sources_1/imports/HDL/pcores/CitirocSlowControl.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/pcores/CitirocSlowControl.vhd"/>
-        <Attr Name="ImportTime" Val="1582056650"/>
+        <Attr Name="ImportTime" Val="1582130538"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -135,7 +135,7 @@
     <File Path="$PSRCDIR/sources_1/imports/HDL/pcores/MCRateMeter.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/pcores/MCRateMeter.vhd"/>
-        <Attr Name="ImportTime" Val="1582056649"/>
+        <Attr Name="ImportTime" Val="1582130538"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -143,7 +143,7 @@
     <File Path="$PSRCDIR/sources_1/imports/HDL/pcores/PULSE_GENERATOR.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/pcores/PULSE_GENERATOR.vhd"/>
-        <Attr Name="ImportTime" Val="1582056656"/>
+        <Attr Name="ImportTime" Val="1582130545"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -151,7 +151,7 @@
     <File Path="$PSRCDIR/sources_1/imports/HDL/pcores/TimestampGenerator.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/pcores/TimestampGenerator.vhd"/>
-        <Attr Name="ImportTime" Val="1582056646"/>
+        <Attr Name="ImportTime" Val="1582130534"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -159,7 +159,7 @@
     <File Path="$PSRCDIR/sources_1/imports/HDL/pcores/U503_custompacket.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/pcores/U503_custompacket.vhd"/>
-        <Attr Name="ImportTime" Val="1582056656"/>
+        <Attr Name="ImportTime" Val="1582130546"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -199,7 +199,7 @@
     <File Path="$PSRCDIR/sources_1/imports/HDL/pcores/comparator.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/pcores/comparator.vhd"/>
-        <Attr Name="ImportTime" Val="1582056655"/>
+        <Attr Name="ImportTime" Val="1582130545"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -215,7 +215,7 @@
     <File Path="$PSRCDIR/sources_1/imports/HDL/pcores/d_latch.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/pcores/d_latch.vhd"/>
-        <Attr Name="ImportTime" Val="1582056674"/>
+        <Attr Name="ImportTime" Val="1582130565"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -255,7 +255,7 @@
     <File Path="$PSRCDIR/sources_1/imports/HDL/pcores/ft600_fifo245_wrapper.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/pcores/ft600_fifo245_wrapper.vhd"/>
-        <Attr Name="ImportTime" Val="1582056657"/>
+        <Attr Name="ImportTime" Val="1582130546"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -263,7 +263,7 @@
     <File Path="$PSRCDIR/sources_1/imports/HDL/pcores/i2cmaster.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/pcores/i2cmaster.vhd"/>
-        <Attr Name="ImportTime" Val="1582056641"/>
+        <Attr Name="ImportTime" Val="1582130528"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -311,7 +311,7 @@
     <File Path="$PSRCDIR/sources_1/imports/HDL/subpage_Framing.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/subpage_Framing.vhd"/>
-        <Attr Name="ImportTime" Val="1582056673"/>
+        <Attr Name="ImportTime" Val="1582130563"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -319,7 +319,7 @@
     <File Path="$PSRCDIR/sources_1/imports/HDL/subpage_Timer64.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/subpage_Timer64.vhd"/>
-        <Attr Name="ImportTime" Val="1582056662"/>
+        <Attr Name="ImportTime" Val="1582130552"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -327,7 +327,7 @@
     <File Path="$PSRCDIR/sources_1/imports/HDL/subpage_TriggerLogic.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/subpage_TriggerLogic.vhd"/>
-        <Attr Name="ImportTime" Val="1582056662"/>
+        <Attr Name="ImportTime" Val="1582130552"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -335,7 +335,7 @@
     <File Path="$PSRCDIR/sources_1/imports/HDL/subpage_frameproc.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/subpage_frameproc.vhd"/>
-        <Attr Name="ImportTime" Val="1582056674"/>
+        <Attr Name="ImportTime" Val="1582130565"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -343,7 +343,7 @@
     <File Path="$PSRCDIR/sources_1/imports/HDL/top_NEWCitirocDesignforDT0WReadoutsoftware.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/top_NEWCitirocDesignforDT0WReadoutsoftware.vhd"/>
-        <Attr Name="ImportTime" Val="1582056657"/>
+        <Attr Name="ImportTime" Val="1582130546"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -351,7 +351,7 @@
     <File Path="$PSRCDIR/sources_1/imports/HDL/pcores/xlx_oscilloscope_sync.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../HDL/pcores/xlx_oscilloscope_sync.vhd"/>
-        <Attr Name="ImportTime" Val="1582056651"/>
+        <Attr Name="ImportTime" Val="1582130539"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
